@@ -27,4 +27,6 @@ jobs:
           node-version: 24
       - run: npm install -g agent-browser@0.35.1
       - run: agent-browser install --with-deps
+      # Permit Chromium's user-namespace sandbox on this disposable Ubuntu runner.
+      - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - run: node --test test/browser.test.mjs
