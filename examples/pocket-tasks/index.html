@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket Tasks</title><style>body{font:17px/1.6 system-ui;background:#f0f4f8;color:#182a40;max-width:900px;margin:4rem auto;padding:0 24px}header{display:flex;justify-content:space-between;align-items:center}nav{display:flex;gap:20px}a{color:#235fa4}main{background:white;padding:30px;border-radius:16px;margin:35px 0}h1{font-size:48px;margin-bottom:10px}form{display:flex;gap:10px;flex-wrap:wrap}label{width:100%}input,button,select{font:inherit;padding:12px;border:1px solid #7a8fa8;border-radius:7px}input{flex:1;min-width:0}button{background:#235fa4;color:white;cursor:pointer}li{padding:14px 0;display:flex;align-items:center;gap:12px}li input{flex:0}li span{flex:1}.completed span{text-decoration:line-through}#status{color:#385670}section{margin:30px 0}.mascot{font-size:65px}</style></head><body><header><strong>Pocket Tasks</strong><nav aria-label="Main"><a href="#tasks">Tasks</a><a href="#about">About</a></nav></header><main id="tasks"><div class="mascot" role="img" aria-label="Friendly notebook mascot">📒</div><h1>A little room for big plans.</h1><p>A tiny local task list. Add something, finish something, take a breath.</p><form id="task-form"><label for="task-input">What needs doing?</label><input id="task-input" name="task" required placeholder="Plan the weekend"><button id="add-task" type="submit">Add task</button></form><section aria-label="Task list"><label for="filter">Show tasks</label> <select id="filter" name="filter"><option value="all">All tasks</option><option value="active">Active</option><option value="done">Completed</option></select><ul id="task-list"></ul><p id="status" role="status" aria-live="polite"></p><button id="clear-completed" type="button">Clear completed</button></section></main><section id="about"><h2>Made for small victories.</h2><p>This example stores tasks in this browser only. It has no account or remote backend.</p></section><script>
+const tasks = [{ title: 'Make a cup of tea', done: false }, { title: 'Read one good page', done: true }];
+const list = document.querySelector('#task-list'), filter = document.querySelector('#filter'), status = document.querySelector('#status');
+function render() {
+  list.replaceChildren();
+  for (const task of tasks) {
+    if (filter.value === 'active' && task.done || filter.value === 'done' && !task.done) continue;
+    const li = document.createElement('li'), check = document.createElement('input'), label = document.createElement('span');
+    li.classList.toggle('completed', task.done); check.type = 'checkbox'; check.checked = task.done; check.setAttribute('aria-label', 'Complete ' + task.title);
+    check.addEventListener('change', () => { task.done = check.checked; render(); }); label.textContent = task.title; li.append(check, label); list.append(li);
+  }
+  status.textContent = tasks.filter(task => !task.done).length + ' active · ' + tasks.filter(task => task.done).length + ' completed';
+}
+document.querySelector('#task-form').addEventListener('submit', event => { event.preventDefault(); const input = document.querySelector('#task-input'); if (input.value.trim()) tasks.push({title: input.value.trim(), done:false}); input.value = ''; render(); });
+filter.addEventListener('change', render);
+document.querySelector('#clear-completed').addEventListener('click', () => { for (let i=tasks.length-1;i>=0;i--) if(tasks[i].done) tasks.splice(i,1); render(); });
+render();
+</script></body></html>

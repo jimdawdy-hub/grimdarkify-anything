@@ -1,6 +1,6 @@
 {
   "name": "grimdarkify-anything",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Outrageously excessive, unofficial Warhammer 40,000 parody toolkit: faction fonts, original mascots, theatrical interfaces, and fresh visual abominations.",
   "type": "module",
   "license": "MIT",
@@ -13,7 +13,8 @@
   "scripts": {
     "test": "node --test",
     "build": "node scripts/build-demo.mjs",
-    "demo": "node scripts/serve-demo.mjs"
+    "demo": "node scripts/serve-demo.mjs",
+    "studio": "node bin/grimdarkify.mjs studio"
   },
   "files": [
     "bin",
@@ -21,6 +22,8 @@
     "data",
     "assets",
     "skills",
+    "studio",
+    "examples",
     "README.md",
     "NOTICE.md",
     "LICENSE"

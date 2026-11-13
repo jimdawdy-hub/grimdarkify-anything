@@ -65,4 +65,4 @@ $('#export-css').addEventListener('click',async()=>{const css=await fetch('theme
 $('#export-tokens').addEventListener('click',()=>download('tokens.json',JSON.stringify({...design,notice},null,2),'application/json'));
 $('#export-brief').addEventListener('click',()=>download('brief.md',buildBrief(faction,design,notice),'text/markdown'));
 $('#export-svg').addEventListener('click',()=>download('crest.svg',studySvg(faction,design,notice),'image/svg+xml'));
-$('#copy-command').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git\ncd grimdarkify-anything\nnode bin/grimdarkify.mjs kit --faction adeptus-arbites --out ./tribunal');$('#copy-command').textContent='Ritual copied';}catch{$('#copy-command').textContent='Select the ritual to copy';}});
+$('#copy-command').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git\ncd grimdarkify-anything\nnpm run studio');$('#copy-command').textContent='Ritual copied';}catch{$('#copy-command').textContent='Select the ritual to copy';}});

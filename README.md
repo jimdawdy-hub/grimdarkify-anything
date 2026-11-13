@@ -14,7 +14,7 @@ Imperial interfaces become gilded cathedral machines: huge blackletter, skulls, 
 
 The live showcase starts with an **Adeptus Arbites parody of Freecase**: Nomo is reimagined as a flying cybernetic skull-law-clerk, the search form petitions the archives, and a perfectly ordinary research task receives the full weight of an imaginary galactic bureaucracy. The showcase's records are explicitly fictional; it is a separate demonstration, not the live Freecase service.
 
-The agent skill requires four visible things in the first viewport: faction typography, a transformed character or major illustration, a theatrical environment, and excessive faction ornament. A coding agent can regenerate the whole target-specific composition and mascot; the CLI supplies a strong starting treatment.
+The transformation engine inspects the real page, invents a fresh faction concept, creates original target-specific artwork, rebuilds the interface, and checks the result in a browser. A separate visual review judges four things in the first viewport: faction typography, a transformed character or major illustration, a theatrical environment, and excessive faction ornament. Failed checks drive a bounded repair pass.
 
 ## What ships
 
@@ -22,16 +22,52 @@ The agent skill requires four visible things in the first viewport: faction typo
 - **Real display fonts**, bundled with their original SIL Open Font Licences: UnifrakturCook, UnifrakturMaguntia, Pirata One, Black Ops One, Orbitron, and Metal Mania.
 - **Original fan assets:** a detailed servo-skull law librarian, fortress-tribunal architecture, and generated faction crests. The original mascot image has its unofficial notice baked in.
 - **Fresh visible variation:** display type, palettes, armor/frame treatment, material, ornament, composition, glow, and staging. Explicit seeds can replay favorite results.
-- **An offline CLI and reusable agent skill.** No runtime dependencies, model calls, API keys, or paid API use are required for local theme generation. Deeper AI redesigns use your existing coding-agent tools and provider.
+- **A working agent pipeline and local studio.** Uses your installed, signed-in Codex or Claude Code CLI. Inspect → design → create art and rebuild → test → critique and repair. Live progress, cancellation, resumable stages, and a report of observed checks.
+- **Offline theme commands and a reusable agent skill.** `kit`, `html`, and `website` work without models or accounts. `run` and the studio use your coding agent and browser.
 - **Mandatory notices** on pages, inside exported images, and in theme metadata. Original fonts retain their licence notices in generated outputs.
 
 ## Quick start
 
-Node.js 22 or newer:
+Node.js 22 or newer, plus a signed-in [Codex](https://developers.openai.com/codex/cli/) or [Claude Code](https://code.claude.com/docs/en/overview) CLI and [agent-browser](https://github.com/vercel-labs/agent-browser):
 
 ```bash
 git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git
 cd grimdarkify-anything
+node bin/grimdarkify.mjs doctor
+npm run studio
+# Open http://127.0.0.1:4180
+```
+
+Enter a website URL or an absolute source-project path, pick any faction, and unleash the redesign. The studio runs locally; the public GitHub Pages site remains the interactive showcase. Agent runs use your saved CLI sign-in and plan limits. API-key environment variables are excluded. No project or generated result is automatically published.
+
+The same pipeline works from the terminal:
+
+```bash
+# Reconstruct a captured website as an independent static fan-parody page
+node bin/grimdarkify.mjs run https://example.com --faction tau-empire --out ./runs/tau-site
+
+# Transform a functioning local app, preserving its source and interactions
+node bin/grimdarkify.mjs run ./examples/pocket-tasks --faction orks --out ./runs/ork-tasks
+
+# Transform a source app that needs a development server
+node bin/grimdarkify.mjs run /path/to/app --faction drukhari --out ./runs/dark-app \
+  --start 'npm run dev -- --host 127.0.0.1 --port {port}' --check 'npm run build'
+
+# Continue after an interrupted agent or repair a failed preview command
+node bin/grimdarkify.mjs resume ./runs/dark-app
+```
+
+Outputs live in a **new directory outside the source project**. Original files are untouched. Each output includes `workspace/` (the transformed project), `evidence/` (real before/after screenshots, inventory, prompts, agent responses and check results), `run.json`, `REPORT.md`, and `report.html`. Serve `workspace/` or use its recorded start command to open the app. The studio previews static results directly and opens reports for source apps.
+
+Source copies exclude credentials, `.env`, private keys, databases, dependencies, Git history, symlinks and target agent configuration. npm projects install dependencies in the copy with lifecycle scripts disabled; use `--install 'your command'` for another package manager or necessary build setup. `--start` runs in that copy and must include `{port}`. Use `--path /dashboard` to select an entry route. Run source code you trust; generated build/test commands execute locally.
+
+Checks cover 1440px and 390px layouts, a visible fan notice, loaded display fonts, image loading, horizontal overflow, original control identifiers and navigation destinations, browser errors, and listed local interactions. Optional `--check` runs the project's tests or build. The agent then judges actual screenshots and repairs failures, up to `--attempts 2` by default. A run that still has issues ends as `needs-review` with exit code 2; failed or cancelled runs can be resumed. Increase the total budget with `resume ./run --attempts 3` for another repair.
+
+**Scope matters:** a URL capture rebuilds the entry page; it does not acquire a remote backend, accounts or private routes. Source mode keeps the real app code, but only its recorded route and checks are verified. Closed native binaries need editable source or a supported theme interface. There is no universal claim that every platform, route or backend was tested. Generated artwork uses available native image tools or original detailed SVG, with the method recorded in the build response.
+
+## Quick offline kit
+
+```bash
 node bin/grimdarkify.mjs kit --faction adeptus-arbites --out ./tribunal
 ```
 
@@ -65,7 +101,7 @@ node bin/grimdarkify.mjs kit --faction primarch-vulkan --out ./forge-temple
 
 The [catalogue](data/factions.json) supplies faction identity. The agent invents a target-specific composition, character transformation, and joke. The supplied servo-skull is an Imperial example, not a requirement to use the same character for every faction.
 
-To reproduce a favored variant, use its recorded seed:
+To reproduce a favored theme variant, use its recorded seed. AI reconstruction remains nondeterministic even with fixed theme tokens:
 
 ```bash
 node bin/grimdarkify.mjs kit --faction adeptus-arbites --seed my-favorite --out ./replay
@@ -80,7 +116,7 @@ node bin/grimdarkify.mjs website https://example.com --out ./parody.html --facti
 
 Local outputs stay beside the source so its existing assets continue to resolve. The adapter injects a theatrical theme and crest, adds a familiar, and marks recognizable mascot images such as Nomo/the owl for servo-skull replacement. Existing forms, links, and scripts are preserved.
 
-URL mode fetches a static HTML snapshot. Original resources and scripts can still contact their own servers; this does not copy a backend or fully capture a client-rendered app. For a full source transformation, let a browser-capable coding agent apply a generated brief. Pages with an inline Content Security Policy use their existing asset pipeline instead of injected styles.
+The quick `website` command fetches static HTML. Original resources and scripts can still contact their own servers; this does not copy a backend or fully capture a client-rendered app. Use `run` for the inspected, agent-driven reconstruction, or source mode to preserve the real app. Pages with an inline Content Security Policy use their existing asset pipeline instead of injected styles.
 
 ## Use with your coding agent
 
@@ -108,6 +144,8 @@ npm run demo
 ```
 
 The showcase has a searchable faction selector, fresh Reforge action, mundane/parody comparison, a fictional search interaction, mascot dialogue, and style/brief/crest exports. `npm run build` produces `_site/`; the included GitHub Pages workflow publishes it.
+
+[Actual pipeline results and verification evidence](docs/verification.md) show the engine transforming a public URL and a working source app, including target-specific artwork and browser checks. CI also runs a real browser regression test without model calls.
 
 ## Unofficial fan work
 

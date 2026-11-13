@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="studio-token" content="__TOKEN__"><title>Grimdarkify · The Transformation Engine</title><link rel="stylesheet" href="/studio.css"><script type="module" src="/studio.mjs"></script></head>
+<body>
+  <header class="masthead"><a href="/" class="wordmark">Grimdarkify<span>ANYTHING / LOCAL AGENT STUDIO</span></a><span class="seal">UNOFFICIAL<br>FAN PARODY</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">THE DEPARTMENT OF UNREASONABLE REDESIGN</p><h1>Submit a website.<br>Summon an abomination.</h1><p>Your app has been found guilty of insufficient theatrical excess. Select a faction. Let the machine rewrite its destiny.</p></div><img src="/assets/servo-skull.png" alt="An original unofficial servo-skull law librarian holding a chained book"></section>
+    <section class="engine" aria-label="Transformation engine">
+      <form id="forge-form" class="panel">
+        <p class="eyebrow">I / THE OFFERING</p><h2>Choose your victim</h2>
+        <label for="target">Website URL or source project</label><input id="target" name="target" placeholder="https://example.com or /path/to/app" required spellcheck="false">
+        <p class="hint">Websites become independent page reconstructions. Source projects are copied and transformed with their code intact.</p>
+        <label for="faction">Swear allegiance</label><select id="faction" name="faction"><option value="adeptus-arbites">Adeptus Arbites</option></select>
+        <label for="agent">Commanding intelligence</label><select id="agent" name="agent"><option value="auto">Automatic · Codex, then Claude</option><option value="codex">Codex</option><option value="claude">Claude Code</option></select>
+        <details><summary>Source app commands</summary><label for="start">Preview command</label><input id="start" name="start" placeholder="npm run dev -- --host 127.0.0.1 --port {port}"><label for="check">Test or build command</label><input id="check" name="check" placeholder="npm test"><p class="hint">Commands run in the copied workspace. Install its dependencies before resuming if needed.</p></details>
+        <button type="submit" id="summon">Unleash the redesign <span aria-hidden="true">↗</span></button><p class="hint">Fresh concept every run. Uses your signed-in coding agent.</p>
+        <p id="setup" role="status"></p>
+      </form>
+      <section class="panel progress" aria-labelledby="progress-title"><p class="eyebrow">II / THE RITUAL</p><h2 id="progress-title">Awaiting a sacrifice</h2><ol id="stages"><li data-stage="inspect">Inspect the real target</li><li data-stage="design">Invent the faction concept</li><li data-stage="build">Create art & rebuild</li><li data-stage="verify">Check desktop, mobile & controls</li><li data-stage="review">Judge the excess & repair</li></ol><div id="log" role="log" aria-label="Live transformation progress"><p>The machinery is ready. Its sense of proportion is not.</p></div><button type="button" id="cancel" class="secondary" hidden>Stop this ritual</button></section>
+    </section>
+    <section id="result" class="panel result" hidden><div class="result-heading"><div><p class="eyebrow">III / THE CONSEQUENCES</p><h2 id="result-title">The transformation</h2></div><a id="report" target="_blank" rel="noopener">Open verification report ↗</a></div><p id="result-note"></p><iframe id="preview" title="Generated unofficial fan-parody preview" sandbox="allow-scripts allow-modals"></iframe></section>
+    <nav id="recent" class="recent" aria-label="Previous transformations" hidden><h2>Previous abominations</h2><ul></ul></nav>
+  </main>
+  <footer><strong>UNOFFICIAL · NON-COMMERCIAL FAN WORK</strong><p>Not affiliated with, endorsed, sponsored, or approved by Games Workshop. Warhammer 40,000 and associated intellectual property belong to Games Workshop Limited. Free distribution only. No official logos or artwork are included. This notice grants no licence or permission to use third-party intellectual property.</p></footer>
+</body></html>
