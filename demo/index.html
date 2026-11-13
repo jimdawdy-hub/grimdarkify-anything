@@ -1,74 +1,43 @@
 <!doctype html>
-<html lang="en" data-grimdark="space-marines">
+<html lang="en" data-grimdark="adeptus-arbites" data-gd-ornament="tribunal">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="An unofficial, non-commercial Warhammer 40,000 inspired design toolkit. Every faction. A different interpretation every time.">
-  <title>Grimdarkify Anything · Reforge your interface</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131513'/%3E%3Ctext x='12' y='48' font-size='48' fill='%23c9ad73' font-family='serif'%3EG%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="theme.css">
-  <link rel="stylesheet" href="demo.css">
-  <script type="module" src="demo.mjs"></script>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="description" content="An outrageously excessive, unofficial Warhammer 40,000 parody forge. Fifty faction and primarch styles. Absolutely no tasteful restraint.">
+ <title>Grimdarkify Anything — The Tribunal of Excess</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23090b14'/%3E%3Ctext x='7' y='51' font-size='51' fill='%23efcf79'%3E☠%3C/text%3E%3C/svg%3E">
+ <link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="demo.css"><script type="module" src="demo.mjs"></script>
 </head>
 <body>
-  <a class="skip" href="#forge">Skip to the forge</a>
-  <header class="masthead">
-    <a class="wordmark" href="#top"><span class="brand-mark" aria-hidden="true">G</span><span>GRIMDARKIFY<span class="wordmark-sub">ANYTHING</span></span></a>
-    <nav aria-label="Main navigation"><a href="#forge">The forge</a><a href="#field-manual">Field manual</a><a href="https://github.com/jimdawdy-hub/grimdarkify-anything">GitHub <span aria-hidden="true">↗</span></a></nav>
-    <span class="release">UNOFFICIAL FAN TOOLKIT <span>V0.1</span></span>
-  </header>
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span aria-hidden="true">✦</span> A different kind of dark mode</p>
-        <h1 id="hero-title">GRIMDARKIFY<br><span>ANYTHING.</span></h1>
-        <p class="hero-lede">Your app has a function.<br>Give it a <em>faction.</em></p>
-        <p class="hero-description">Websites. Apps. Themes. Turn the everyday into the far future. Choose your allegiance. Reforge the design. Never get the same world twice.</p>
-        <a class="primary-link" href="#forge">ENTER THE FORGE <span aria-hidden="true">↓</span></a>
-        <div class="hero-facts"><span><b id="faction-count">49</b> faction &amp; primarch styles</span><span><b>∞</b> interpretations</span><span><b>0</b> API keys needed</span></div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-corner corner-one"></div><div class="art-corner corner-two"></div>
-        <div id="reliquary"></div>
-        <div class="art-caption"><span>FIG. 001 / ORIGINAL GEOMETRIC STUDY</span><span id="art-direction">CEREMONIAL MACHINE</span></div>
-      </div>
-    </section>
-    <div class="marquee"><span>THE FUNCTION REMAINS.</span><span aria-hidden="true">✦</span><span>THE FORM IS REFORGED.</span><span aria-hidden="true">✦</span><span>UNOFFICIAL. FREE. FOR THE FUN OF IT.</span></div>
-    <section id="forge" class="forge-section" aria-labelledby="forge-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / THE FORGE</p><h2 id="forge-title">Choose your allegiance.</h2></div><p>One interface. A thousand possible futures.<br>Same faction, different design. Every time.</p></div>
-      <div class="workbench">
-        <aside class="forge-controls" aria-label="Design controls">
-          <label for="faction-search" class="control-label">FIND YOUR FACTION</label>
-          <input id="faction-search" type="search" placeholder="Faction, legion, or primarch…" autocomplete="off">
-          <label for="faction" class="control-label">ALLEGIANCE</label>
-          <select id="faction" aria-describedby="faction-description"><option>Loading factions…</option></select>
-          <p id="faction-description" class="faction-description"></p>
-          <div class="palette" id="palette" role="group" aria-label="Generated palette"></div>
-          <div class="design-spec"><p><span>FRAME</span><b id="frame-value">—</b></p><p><span>SURFACE</span><b id="texture-value">—</b></p><p><span>COMPOSITION</span><b id="layout-value">—</b></p></div>
-          <button id="reforge" class="reforge" type="button">REFORGE <span aria-hidden="true">⟳</span></button>
-          <p class="control-note">Fresh entropy on every strike.<br>The faction stays. The design evolves.</p>
-          <details class="export-controls"><summary>EXPORT THIS VARIATION</summary><button id="export-css" type="button">Download stylesheet ↓</button><button id="export-tokens" type="button">Download design tokens ↓</button><button id="export-brief" type="button">Download agent brief ↓</button><button id="export-svg" type="button">Download art study (SVG) ↓</button></details>
-        </aside>
-        <div class="preview-area">
-          <div class="preview-toolbar"><span><i aria-hidden="true"></i> LIVE SPECIMEN / PROJECT ATLAS</span><div class="comparison" role="group" aria-label="Preview mode"><button id="before" type="button" aria-pressed="false">Before</button><button id="after" type="button" aria-pressed="true">Reforged</button></div></div>
-          <div class="app-window" id="specimen">
-            <div class="app-topbar"><span class="app-emblem" aria-hidden="true">✦</span><strong>ATLAS</strong><span class="app-workspace">Workspace / Overview</span><span class="app-avatar" role="img" aria-label="Demo user JD">JD</span></div>
-            <div class="app-body"><nav class="app-nav" aria-label="Demo project views"><button class="active" type="button" data-view="Overview">◈ <span>Overview</span></button><button type="button" data-view="Projects">▤ <span>Projects</span></button><button type="button" data-view="Activity">⌁ <span>Activity</span></button><span class="app-nav-bottom">SECTOR 004<br>ALL SYSTEMS NOMINAL</span></nav>
-              <div class="app-content"><div class="app-title-row"><div><p class="app-kicker" id="app-kicker">YOUR WORK, IN ORDER</p><h3 id="app-title">Command overview</h3></div><button id="new-task" type="button">+ New task</button></div>
-                <div class="app-stats"><article class="gd-panel"><p>Active projects</p><b>08</b><span>2 nearing completion</span></article><article class="gd-panel"><p>Completed tasks</p><b id="completed-count">24</b><span>This campaign</span></article><article class="gd-panel"><p>System health</p><b>99<span>%</span></b><span>Operational</span></article></div>
-                <section class="mission-panel gd-panel" aria-labelledby="mission-title"><div class="mission-heading"><h4 id="mission-title">Today's directives</h4><span>3 ASSIGNED</span></div><label class="task"><input type="checkbox"><span><strong>Review the navigation</strong><small>Design system · High priority</small></span><span class="task-badge">DESIGN</span></label><label class="task"><input type="checkbox"><span><strong>Deploy the new release</strong><small>Infrastructure · Due today</small></span><span class="task-badge">OPS</span></label><label class="task"><input type="checkbox"><span><strong>Document the components</strong><small>Engineering · In progress</small></span><span class="task-badge">BUILD</span></label><form id="task-form" hidden><label for="task-name">Task name</label><div class="task-entry"><input id="task-name" maxlength="80" required placeholder="A new directive…"><button type="submit">Add task</button></div></form></section>
-                <div class="app-bottomline"><span id="specimen-faction">UNOFFICIAL FACTION STUDY</span><span>FUNCTION PRESERVED / FORM REFORGED</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="preview-notice"><strong>UNOFFICIAL · NON-COMMERCIAL FAN WORK</strong> · Not affiliated with or endorsed by Games Workshop. Warhammer 40,000 IP belongs to Games Workshop Limited. No official logos or artwork.</div>
-          <div class="variation-line" aria-live="polite"><span id="variation-status">Preparing the forge…</span><span id="seed-value"></span></div>
-        </div>
-      </div>
-    </section>
-    <section id="field-manual" class="manual" aria-labelledby="manual-title"><div class="section-heading"><div><p class="eyebrow">02 / FIELD MANUAL</p><h2 id="manual-title">Bring your own machine.</h2></div><p>A toolkit for your coding agent.<br>A working CLI for the rest of us.</p></div><div class="manual-grid"><article><span class="step">I.</span><h3>Choose a faction.</h3><p>From Drukhari blades to T'au precision. Every major army, plus the known primarchs and their legions.</p></article><article><span class="step">II.</span><h3>Reforge the design.</h3><p>Get a fresh palette, material, frame, typographic treatment, and design brief. No paid model needed.</p></article><article><span class="step">III.</span><h3>Keep what works.</h3><p>Your agent applies the design to your stack. Your routes, data, controls, and accessibility endure.</p></article></div><div class="terminal"><span class="terminal-label">YOUR TERMINAL</span><code>git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git<br>cd grimdarkify-anything<br>node bin/grimdarkify.mjs kit --faction drukhari --out ./my-kit</code><button id="copy-command" type="button">Copy commands</button></div><p class="manual-footnote">Website URL mode creates a local static preview. Native apps need editable source or a supported theme format. This toolkit does not rewrite closed binaries.</p></section>
-  </main>
-  <!-- FAN_NOTICE -->
-  <div class="site-colophon"><span>GRIMDARKIFY ANYTHING / AN UNOFFICIAL FAN EXPERIMENT</span><a href="https://github.com/jimdawdy-hub/grimdarkify-anything">Source &amp; field notes ↗</a></div>
-</body>
-</html>
+ <a class="skip" href="#forge">Skip to the forge</a>
+ <div class="edict-strip"><span>UNOFFICIAL FAN PARODY · FREE &amp; NON-COMMERCIAL</span><span>BY DECREE: TASTEFUL RESTRAINT IS HERESY</span></div>
+ <header class="masthead"><a class="wordmark" href="#top"><span class="brand-skull" aria-hidden="true">☠</span><span>Grimdarkify <small>Anything</small></span></a><nav aria-label="Main navigation"><a href="#forge">The Forge</a><a href="#field-manual">Field Manual</a><a href="https://github.com/jimdawdy-hub/grimdarkify-anything">Source ↗</a></nav><span class="chapter-seal" aria-hidden="true">LEX<br>EXCESSUS</span></header>
+ <main id="top">
+ <section class="intro" aria-labelledby="hero-title"><div class="intro-rule"><span></span><b aria-hidden="true">✦ ☠ ✦</b><span></span></div><p class="eyebrow">IN THE GRIM DARKNESS OF YOUR BROWSER</p><h1 id="hero-title">There is only <em>excess.</em></h1><p>Take a perfectly reasonable website.<br>Turn it into an <strong>utterly unreasonable war machine.</strong></p><div class="intro-foot"><span>BLACKLETTER. BRASS. BLASPHEMOUSLY MANY SKULLS.</span><span><b id="faction-count">50</b> ALLEGIANCES · NEVER THE SAME ABOMINATION TWICE</span></div></section>
+ <section id="forge" aria-labelledby="forge-title">
+ <div class="forge-heading"><div><p class="eyebrow">SPECIMEN 001 / A WEBSITE CONDEMNED TO REFORGING</p><h2 id="forge-title">Freecase. Now serving the Lex Imperialis.</h2></div><a class="original-link" href="https://freecase.ai" target="_blank" rel="noreferrer">Original inspiration: freecase.ai ↗</a></div>
+ <div class="control-rack"><div class="faction-search"><label for="faction-search">LOCATE YOUR ALLEGIANCE</label><input id="faction-search" type="search" placeholder="Faction, legion, or primarch…" autocomplete="off"></div><div class="faction-select"><label for="faction">FACTION OF THE CONDEMNED</label><select id="faction"><option>Consecrating selector…</option></select></div><div class="comparison" role="group" aria-label="Preview mode"><button id="before" aria-pressed="false" type="button">Mundane</button><button id="after" aria-pressed="true" type="button">GRIMDARK</button></div><button id="reforge" type="button"><span aria-hidden="true">⚒</span> REFORGE AGAIN</button></div>
+ <div class="theater-wrap"><div class="chain chain-left" aria-hidden="true"></div><div class="chain chain-right" aria-hidden="true"></div><span class="corner-bolt bolt-a" aria-hidden="true">✦</span><span class="corner-bolt bolt-b" aria-hidden="true">✦</span><span class="corner-bolt bolt-c" aria-hidden="true">✦</span><span class="corner-bolt bolt-d" aria-hidden="true">✦</span>
+ <div class="app-window" id="specimen">
+  <div class="hazard-strip"><span id="example-decree">IGNORANCE OF THE LAW IS NO DEFENCE. NEITHER IS HAVING A BAD SEARCH ENGINE.</span></div>
+  <header class="case-header"><a href="#specimen" class="case-brand" aria-label="Freecase parody home"><span class="brand-skull" aria-hidden="true">☠</span><span>freecase<span class="case-tld">.imperialis</span><small id="example-brand">ADEPTUS ARBITES / JUDICIAL COGITATOR</small></span></a><nav aria-label="Demo website navigation"><button type="button" data-view="cases" class="active" aria-label="Case law">Codex of Judgments</button><button type="button" data-view="statutes" aria-label="Statutes">Imperial Edicts</button><button type="button" data-view="citations" aria-label="Citation checking">Heresy Detector</button></nav><button id="login" type="button">Identify Thyself</button></header>
+  <div class="case-hero">
+   <div class="case-copy"><p class="case-eyebrow" id="case-eyebrow">THE LEX IMPERIALIS IS VAST. YOUR PATIENCE IS NOT.</p><h3 id="case-title">Set your legal<br>research <em>on trial.</em></h3><p class="case-lede" id="case-lede">Ten million precedents. One merciless search engine.<br>For the citizen who would rather cite authority than become an example.</p>
+    <form id="case-search"><label for="search-query" id="search-label">PETITION THE ARCHIVES</label><div class="search-machine"><span class="search-sigil" aria-hidden="true">⚖</span><input id="search-query" type="search" placeholder="Enter a citation. Confess a legal question." aria-label="Search the fictional parody archive" required><button type="submit" id="search-submit" aria-label="Search fictional parody records">INVOKE<br>JUDGMENT <span aria-hidden="true">➜</span></button></div><div class="search-options"><label><input type="radio" name="mode" value="cases" checked> Case law</label><label><input type="radio" name="mode" value="statutes"> Statutes</label><span>NO TITHE REQUIRED FOR KEYWORD SEARCH</span></div></form>
+    <div class="proof-row"><div><b>10M<span>+</span></b><small>PRECEDENTS IN THE VAULT</small></div><div><b>Zero</b><small>TOLERANCE FOR BAD CITATIONS</small></div><div><b>Free</b><small>SEARCH. YOUR SOUL IS OPTIONAL.</small></div></div>
+   </div>
+   <aside class="mascot-zone" aria-label="Nomo reimagined as a servo-skull law librarian"><div class="halo" aria-hidden="true"><span>LEX • JUDICIUM • PRAECEDENTIA • LEX • JUDICIUM • PRAECEDENTIA</span></div><div class="servo-aura" aria-hidden="true"></div><div id="alternate-mascot" class="alternate-mascot" hidden></div><img class="servo-skull" src="servo-skull.png" alt="Nomo replaced by an ornate flying servo-skull with a judicial helmet, robotic lenses, and a law book"><div class="mundane-owl" aria-hidden="true">🦉</div><div class="wax-seal" aria-hidden="true"><b>LEX</b><span>APPROVED<br>BY NO ONE</span></div><div class="mascot-caption"><span id="familiar-name">NOMONOMICON</span><small id="familiar-job">FORMER OWL. CURRENT INSTRUMENT OF PROCEDURAL DREAD.</small></div><button type="button" id="mascot-speak" aria-label="Ask the servo-skull for a research tip">“Your objection has been archived.<br>Your appeal has been pre-denied.”</button></aside>
+  </div>
+  <div id="search-results" class="search-results" hidden aria-live="polite"></div>
+  <div class="evidence-panels"><article class="gd-panel"><span class="panel-icon" aria-hidden="true">⚖</span><div><h4 id="feature-one">Precedent is sacred.</h4><p>Browse the public record. Read the opinion. Bring receipts to the tribunal.</p><span>THE ARCHIVE ENDURES</span></div></article><article class="gd-panel"><span class="panel-icon" aria-hidden="true">☠</span><div><h4 id="feature-two">Nomo has been upgraded.</h4><p>Less owl. More skull. Equally judgmental about your research methodology.</p><span>NOW WITH 400% MORE CABLES</span></div></article><article class="gd-panel"><span class="panel-icon" aria-hidden="true">✠</span><div><h4 id="feature-three">Know thy citation.</h4><p>Potential negative treatment is flagged. A green lumen is still not a guarantee.</p><span>VERIFY. THEN VERIFY AGAIN.</span></div></article></div>
+  <div class="fictional-label">FICTIONAL FAN-PARODY SHOWCASE · NOT THE LIVE FREECASE SERVICE · NO REAL LEGAL DETERMINATIONS</div>
+  <div class="preview-notice"><strong>UNOFFICIAL · NON-COMMERCIAL FAN PARODY</strong><span>Not affiliated with or endorsed by Games Workshop. Warhammer 40,000 IP belongs to Games Workshop Limited. Original fan artwork; no official logos. Free distribution only.</span></div>
+ </div></div>
+ <div class="forge-readout"><div><p id="faction-description"></p><span id="variation-status" aria-live="polite">CONSECRATING…</span><span id="seed-value"></span></div><div id="palette" role="group" aria-label="Generated palette"></div><details class="export-controls"><summary>REQUISITION THIS ABOMINATION ↓</summary><button id="export-css" type="button">Stylesheet</button><button id="export-tokens" type="button">Tokens</button><button id="export-brief" type="button">Agent brief</button><button id="export-svg" type="button">Crest (SVG)</button></details></div>
+ <p class="forge-message" id="forge-message" role="status"></p>
+ </section>
+ <section id="field-manual" class="field-manual"><div class="intro-rule"><span></span><b aria-hidden="true">☠</b><span></span></div><p class="eyebrow">THIS IS NOT A DARK MODE. THIS IS A HOSTILE TAKEOVER BY THE ART DEPARTMENT.</p><h2>Consecrate absolutely anything.</h2><div class="manual-grid"><article><b>I.</b><h3>Pick your fanaticism.</h3><p>Fifty faction and primarch styles. Imperial blackletter, Drukhari blades, screaming Ork scrapyards, alien tombs, and whatever Fulgrim is doing.</p></article><article><b>II.</b><h3>Replace the entire vibe.</h3><p>Typography. Mascots. Architecture. Copy. Every website is an opportunity for wildly excessive faction-specific parody.</p></article><article><b>III.</b><h3>Reforge. Again.</h3><p>The same settings produce new palettes, layouts, relics, materials, and visual absurdities. The controls still work. The dignity is gone.</p></article></div><div class="terminal"><span>THE RITUAL OF INSTALLATION</span><code>git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git<br>cd grimdarkify-anything<br>node bin/grimdarkify.mjs kit --faction adeptus-arbites --out ./tribunal</code><button id="copy-command" type="button">Copy the ritual</button></div><p class="manual-note">The toolkit includes real bundled display fonts, original fan art, an offline CLI, and a coding-agent skill for full transformations. URL mode is a static preview; an agent can rework your editable source.</p></section>
+ </main>
+ <!-- FAN_NOTICE -->
+ <div class="site-colophon"><span>MADE FOR FUN. NOT FOR THE ADMINISTRATUM.</span><a href="https://github.com/jimdawdy-hub/grimdarkify-anything">Inspect the forbidden source ↗</a></div>
+ <dialog id="identity-dialog"><form method="dialog"><h2>State your designation.</h2><p>Relax, citizen. This is a parody demo. Your real account remains entirely un-interrogated.</p><button>Return to the tribunal</button></form></dialog>
+</body></html>

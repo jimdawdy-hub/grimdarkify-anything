@@ -1,16 +1,32 @@
 {
   "name": "grimdarkify-anything",
-  "version": "0.1.0",
-  "description": "An unofficial, noncommercial grimdark UI toolkit. Choose a faction. Reforge anything. Get a new design every run.",
+  "version": "0.2.0",
+  "description": "Outrageously excessive, unofficial Warhammer 40,000 parody toolkit: faction fonts, original mascots, theatrical interfaces, and fresh visual abominations.",
   "type": "module",
   "license": "MIT",
-  "engines": { "node": ">=22" },
-  "bin": { "grimdarkify": "bin/grimdarkify.mjs" },
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "grimdarkify": "bin/grimdarkify.mjs"
+  },
   "scripts": {
     "test": "node --test",
     "build": "node scripts/build-demo.mjs",
     "demo": "node scripts/serve-demo.mjs"
   },
-  "files": ["bin", "src", "data", "assets", "skills", "README.md", "NOTICE.md", "LICENSE"],
-  "repository": { "type": "git", "url": "https://github.com/jimdawdy-hub/grimdarkify-anything.git" }
+  "files": [
+    "bin",
+    "src",
+    "data",
+    "assets",
+    "skills",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimdawdy-hub/grimdarkify-anything.git"
+  }
 }

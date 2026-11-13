@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="night" x2="0" y2="1"><stop stop-color="#060a13"/><stop offset=".6" stop-color="#251216"/><stop offset="1" stop-color="#090b10"/></linearGradient>
+ <linearGradient id="iron" x2="1" y2="0"><stop stop-color="#02050b"/><stop offset=".25" stop-color="#303641"/><stop offset=".45" stop-color="#141a25"/><stop offset=".7" stop-color="#41434a"/><stop offset="1" stop-color="#03050a"/></linearGradient>
+ <linearGradient id="brass" x2="1" y2="1"><stop stop-color="#39261a"/><stop offset=".28" stop-color="#d2a655"/><stop offset=".45" stop-color="#f4df9e"/><stop offset=".62" stop-color="#72502d"/><stop offset="1" stop-color="#241a14"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#ffdc81"/><stop offset=".25" stop-color="#c64622"/><stop offset=".7" stop-color="#8e1527"/><stop offset="1" stop-color="#170b1b"/></linearGradient>
+ <radialGradient id="fire"><stop stop-color="#f88736" stop-opacity=".5"/><stop offset="1" stop-color="#801526" stop-opacity="0"/></radialGradient>
+ <pattern id="stones" width="140" height="80" patternUnits="userSpaceOnUse"><path d="M0 0h140v80H0zM70 0v40M0 40h140M35 40v40" fill="none" stroke="#756447" stroke-opacity=".12" stroke-width="2"/></pattern>
+ <pattern id="stars" width="89" height="107" patternUnits="userSpaceOnUse"><circle cx="15" cy="29" r="1" fill="#ffd388" opacity=".4"/><circle cx="69" cy="91" r=".7" fill="#dd705c" opacity=".5"/></pattern>
+ <g id="window"><path d="M-48 500V115Q-48 72 0 25Q48 72 48 115V500Z" fill="url(#glass)" stroke="url(#brass)" stroke-width="11"/><path d="M0 35v465M-44 180h88M-44 300h88M-44 420h88M-40 115q40-55 80 0M-40 250l40-45 40 45-40 45zM-40 370l40-45 40 45-40 45z" fill="none" stroke="#160d16" stroke-width="8"/><path d="M-58 510V115Q-58 60 0 8Q58 60 58 115V510" fill="none" stroke="#9c7747" stroke-width="3"/></g>
+ <g id="pillar"><path d="M-47 900V200L-33 155V115L0 35 33 115V155L47 200V900Z" fill="url(#iron)" stroke="#6c5d46" stroke-width="2"/><path d="M-21 895V205L0 105 21 205V895M-34 275h68M-34 290h68M-34 700h68M-34 715h68" fill="none" stroke="#9c7c48" stroke-width="4"/><path d="M-57 900h114v25H-57zM-53 795h106v22H-53z" fill="url(#brass)"/><circle cy="450" r="12" fill="#bd9353"/><circle cy="450" r="6" fill="#461b1a"/></g>
+ <g id="chain"><path d="M0 0c-16 0-16 30 0 30s16-30 0-30m0 25c-9 0-9 30 0 30s9-30 0-30m0 25c-16 0-16 30 0 30s16-30 0-30m0 25c-9 0-9 30 0 30s9-30 0-30" fill="none" stroke="#b08b50" stroke-width="5"/></g>
+</defs>
+<rect width="1600" height="1000" fill="url(#night)"/><rect width="1600" height="1000" fill="url(#stones)"/>
+<ellipse cx="800" cy="525" rx="750" ry="530" fill="url(#fire)"/>
+<path d="M210 1000V400Q210 170 800-120Q1390 170 1390 400V1000M300 1000V420Q300 210 800 0Q1300 210 1300 420V1000M360 1000V440Q360 270 800 85Q1240 270 1240 440V1000" fill="none" stroke="url(#brass)" stroke-width="18" opacity=".6"/>
+<path d="M0 1000V300L100 165 200 300V1000M1400 1000V300L1500 165 1600 300V1000" fill="url(#iron)" stroke="#675237" stroke-width="5"/>
+<g opacity=".8"><use href="#window" transform="translate(115 170) scale(1.3)"/><use href="#window" transform="translate(365 85) scale(1.15)"/><use href="#window" transform="translate(1235 85) scale(1.15)"/><use href="#window" transform="translate(1485 170) scale(1.3)"/></g>
+<g opacity=".9"><use href="#pillar" transform="translate(35) scale(1.2)"/><use href="#pillar" transform="translate(245 20)"/><use href="#pillar" transform="translate(490 -50) scale(.8)"/><use href="#pillar" transform="translate(1110 -50) scale(.8)"/><use href="#pillar" transform="translate(1355 20)"/><use href="#pillar" transform="translate(1565) scale(1.2)"/></g>
+<g fill="none" stroke="url(#brass)" stroke-width="8" opacity=".55"><circle cx="800" cy="260" r="135"/><circle cx="800" cy="260" r="112"/><path d="M800 130v260M670 260h260M710 170l180 180M710 350l180-180"/><circle cx="800" cy="260" r="40"/></g>
+<g opacity=".65"><use href="#chain" transform="translate(580 -10)"/><use href="#chain" transform="translate(580 90)"/><use href="#chain" transform="translate(1020 -10)"/><use href="#chain" transform="translate(1020 90)"/></g>
+<path d="M0 900Q400 820 800 900Q1200 820 1600 900V1000H0Z" fill="#08090d"/>
+<g fill="none" stroke="#bd995b" opacity=".25"><path d="M0 940h1600M0 960h1600M0 980h1600M800 900L20 1000M800 900l-400 100M800 900v100M800 900l400 100M800 900l780 100"/></g>
+<rect width="1600" height="1000" fill="url(#stars)"/>
+<text x="800" y="992" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#bdab8c">Original fan illustration · Unofficial · Non-commercial · Not endorsed by Games Workshop</text>
+</svg>

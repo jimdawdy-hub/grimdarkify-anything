@@ -5,7 +5,7 @@ import { buildDemo } from './build-demo.mjs';
 
 const site = await realpath(await buildDemo());
 const port = Number(process.env.GRIMDARKIFY_PORT ?? 4173);
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.mjs': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.mjs': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ttf': 'font/ttf' };
 createServer(async (request, response) => {
   try {
     const path = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);

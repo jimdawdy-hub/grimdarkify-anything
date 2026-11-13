@@ -1,6 +1,6 @@
 # Research and visual references
 
-Checked 2026-11-13. The palettes, motifs, frame choices, summaries, and typography prescriptions in `data/factions.json` are original design proposals. They are not official color specifications, sampled pixels, copied artwork, or a claim of Games Workshop approval.
+Checked 2026-11-13. The original palettes, motifs, frame choices, summaries, and typography prescriptions in `data/factions.json` are original design proposals. They are not official color specifications, sampled pixels, copied artwork, or a claim of Games Workshop approval.
 
 ## Catalogue coverage
 
@@ -8,7 +8,7 @@ The [official 40k army selector](https://warhammer40000.com/the-armies/) provide
 
 The [official primarch design retrospective](https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/) supports the 18 known legion/primarch mappings. The [official Alpha Legion article](https://www.warhammer-community.com/en-gb/articles/aidlhczn/legions-of-the-horus-heresy-the-alpha-legion-are-on-your-side-or-are-they/) expressly discusses Alpharius's twin Omegon. There are therefore 19 named primarch profiles here: one for each known legion lineage, plus a separate sibling interpretation for Omegon. The dataset invents neither identities nor heraldry for the lost II and XI slots. A profile is an aesthetic interpretation, not a claim its subject is currently alive or playable in 40k.
 
-Two additional choices bring the total to 49. Adeptus Titanicus is an allied-engine scale study, supported by its listing in the [June 2026 event companion](https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf), rather than a claim of a separate full codex. Dark Mechanicum is explicitly a **lore extra** associated with [Horus Heresy heraldry](https://www.warhammer-community.com/en-gb/articles/q0qhnrpr/heraldry-of-the-dark-mechanicum-part-one/), not a claimed standalone 40k army.
+Two additional choices originally brought the catalogue to 49. The explicit Adeptus Arbites parody profile now makes 50, using the [official Exaction Squad introduction](https://www.warhammer-community.com/en-gb/articles/DHbfyzyv/adeptus-arbites-exaction-squads-are-simply-too-good-for-regular-police-work/) as a visual reference. Adeptus Titanicus is an allied-engine scale study, supported by its listing in the [June 2026 event companion](https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf), rather than a claim of a separate full codex. Dark Mechanicum is explicitly a **lore extra** associated with [Horus Heresy heraldry](https://www.warhammer-community.com/en-gb/articles/q0qhnrpr/heraldry-of-the-dark-mechanicum-part-one/), not a claimed standalone 40k army.
 
 ## Artwork reference catalogue
 
@@ -46,3 +46,7 @@ The accessible [official Warhammer Community terms](https://www.warhammer-commun
 Every produced artifact must carry a readable unofficial/noncommercial notice under this project's requirement. The proposed notice is project-authored, not a GW-approved licence. A visible footer suits interfaces; screenshots, images, SVGs and print exports need the notice in the exported visual area, not only hidden metadata. Keep the word **UNOFFICIAL** readily visible and provide fuller rights text nearby. A notice does not confer third-party rights or establish compliance with otherwise applicable conditions.
 
 A [secondary summary checked November 10](https://fanrules.net/en/warhammer/) claims the latest guidelines also require human-created fan works and licences for apps/games. That claim was not confirmed from the blocked primary page and is not treated as established policy here. Recheck the live primary guidance before making a distribution or licensing claim.
+
+## Parody direction (v0.2)
+
+The intended output is a knowingly excessive Warhammer 40,000 parody: actual blackletter fonts, major original mascot transformations, theatrical environments, extravagant ornament, vivid material contrasts, and comic copy. See the [original servo-skull asset and font credits](../assets/ASSET-CREDITS.md). A restrained dark theme does not meet this project’s visual brief.

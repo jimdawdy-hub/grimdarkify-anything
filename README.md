@@ -1,20 +1,29 @@
 # Grimdarkify Anything
 
-**Your app has a function. Give it a faction.**
+**Take a perfectly reasonable website. Turn it into an utterly unreasonable war machine.**
 
-An unofficial, non-commercial Warhammer 40,000 inspired design toolkit for coding agents and humans. Reforge websites, apps, and themes while preserving what they do. Choose a faction; get a new visual interpretation every time.
+An outrageously excessive, unofficial Warhammer 40,000 fan-parody toolkit. Reimagine the typography, architecture, branding, mascot, copy, and ornament of an app while keeping its real controls working. The same faction settings produce a different incarnation each run.
 
-**[Open the forge](https://jimdawdy-hub.github.io/grimdarkify-anything/) · [Agent skill](skills/grimdarkify-anything/SKILL.md) · [Visual research](docs/research.md) · [Fan notice](NOTICE.md)**
+**[Enter the forge](https://jimdawdy-hub.github.io/grimdarkify-anything/) · [Agent skill](skills/grimdarkify-anything/SKILL.md) · [Art and font credits](assets/ASSET-CREDITS.md) · [Fan notice](NOTICE.md)**
 
-![Grimdarkify Anything: faction selector and a functioning task manager transformed into an original gothic-industrial interface. Unofficial non-commercial fan work.](docs/images/forge.png)
+![Freecase transformed into an extravagant Adeptus Arbites fortress-courthouse, with blackletter typography, brass frames, red wax seals, and a servo-skull replacing its owl mascot. Unofficial noncommercial fan parody.](docs/images/forge.png)
 
-## What you get
+## The brief is excess
 
-- **49 selectable faction and primarch styles.** Drukhari, T’au, Orks, Aeldari, Necrons, Tyranids, Votann, Imperial armies, Chaos armies, and more. Nineteen named primarch profiles cover the 18 known legion lineages, including Alpharius and Omegon separately. Lore extras are labeled.
-- **Fresh designs, not fixed skins.** Every ordinary run draws fresh entropy to vary colors, frames, typography, texture, proportions, and composition. The agent brief asks for a new target-specific interpretation. An optional seed can replay a result you like.
-- **A real CLI.** Generate CSS, JSON tokens, an agent brief, a preview, and mandatory notice assets. Restyle local HTML or create a themed static preview from a URL.
-- **A reusable agent skill.** Give your coding agent the visual grammar, platform mappings, and preservation checks to apply the design to your own stack.
-- **No paid model required.** Local generation uses Node's built-in APIs. Zero runtime dependencies, API keys, model calls, or artwork downloads.
+Imperial interfaces become gilded cathedral machines: huge blackletter, skulls, armor, cables, seals, parchment, and altogether too much ceremonial importance. Orks get noisy scrapwork. T’au get absurdly advanced instrumentation. Drukhari get predatory blades, poison light, and theatrical cruelty. Every faction gets its own shape language and visual jokes.
+
+The live showcase starts with an **Adeptus Arbites parody of Freecase**: Nomo is reimagined as a flying cybernetic skull-law-clerk, the search form petitions the archives, and a perfectly ordinary research task receives the full weight of an imaginary galactic bureaucracy. The showcase's records are explicitly fictional; it is a separate demonstration, not the live Freecase service.
+
+The agent skill requires four visible things in the first viewport: faction typography, a transformed character or major illustration, a theatrical environment, and excessive faction ornament. A coding agent can regenerate the whole target-specific composition and mascot; the CLI supplies a strong starting treatment.
+
+## What ships
+
+- **50 faction and primarch profiles**, including Adeptus Arbites, Drukhari, T’au, Orks, the major armies, and 19 named primarchs covering 18 known legion lineages. Alpharius and Omegon have separate profiles; lost identities are not invented.
+- **Real display fonts**, bundled with their original SIL Open Font Licences: UnifrakturCook, UnifrakturMaguntia, Pirata One, Black Ops One, Orbitron, and Metal Mania.
+- **Original fan assets:** a detailed servo-skull law librarian, fortress-tribunal architecture, and generated faction crests. The original mascot image has its unofficial notice baked in.
+- **Fresh visible variation:** display type, palettes, armor/frame treatment, material, ornament, composition, glow, and staging. Explicit seeds can replay favorite results.
+- **An offline CLI and reusable agent skill.** No runtime dependencies, model calls, API keys, or paid API use are required for local theme generation. Deeper AI redesigns use your existing coding-agent tools and provider.
+- **Mandatory notices** on pages, inside exported images, and in theme metadata. Original fonts retain their licence notices in generated outputs.
 
 ## Quick start
 
@@ -23,103 +32,89 @@ Node.js 22 or newer:
 ```bash
 git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git
 cd grimdarkify-anything
-node bin/grimdarkify.mjs kit --faction drukhari --out ./my-kit
+node bin/grimdarkify.mjs kit --faction adeptus-arbites --out ./tribunal
 ```
 
-Open `my-kit/preview.html`. Give `my-kit/brief.md` to your coding agent along with your target project. The kit contains:
+Open `tribunal/preview.html` and give `tribunal/brief.md` to your coding agent with the target project. The kit contains:
 
 ```text
-my-kit/
-  theme.css       original faction-aware stylesheet
-  tokens.json     palette, geometry, typography, variation seed, and notice
-  brief.md        this variation's instructions for your agent
-  preview.html    working local interface sample
-  notice.html    visible website footer
-  watermark.svg  small print for image/document exports
-  study.svg      original faction-aware geometric art, with visible notice
-  NOTICE.txt     full fan notice
+tribunal/
+  theme.css          real embedded fonts, fan art, and theatrical CSS
+  tokens.json        faction, visual settings, variation seed, and notice
+  brief.md           instructions for this original parody transformation
+  preview.html       working preview with an extravagant research familiar
+  study.svg          original fan crest, including visible small print
+  notice.html        visible page footer
+  watermark.svg      small print for image and document exports
+  NOTICE.txt         full fan notice
+  FONT-LICENSES.txt  original bundled font licences
 ```
 
-Run the same command again with a **new output path** to get a different result. Existing work is never overwritten.
+The stylesheet embeds its font and art resources so the kit can work offline. Use a **new output path** for another incarnation; existing work is never overwritten.
 
-## Pick your allegiance
+## Choose a faction
 
 ```bash
 node bin/grimdarkify.mjs factions
-node bin/grimdarkify.mjs factions --json
-node bin/grimdarkify.mjs kit --faction orks --out ./ork-kit
-node bin/grimdarkify.mjs kit --faction tau-empire --out ./tau-kit
-node bin/grimdarkify.mjs kit --faction primarch-sanguinius --out ./blood-kit
-node bin/grimdarkify.mjs kit --faction primarch-vulkan --out ./forge-kit
+node bin/grimdarkify.mjs kit --faction orks --out ./scrap-yard
+node bin/grimdarkify.mjs kit --faction drukhari --out ./knife-palace
+node bin/grimdarkify.mjs kit --faction tau-empire --out ./greater-good
+node bin/grimdarkify.mjs kit --faction primarch-sanguinius --out ./blood-sanctum
+node bin/grimdarkify.mjs kit --faction primarch-vulkan --out ./forge-temple
 ```
 
-Browse the full [faction catalogue](data/factions.json). The live demo supports searching by faction, legion, or primarch and reforging the same selection repeatedly. The lost primarchs of II and XI are not assigned invented identities.
+The [catalogue](data/factions.json) supplies faction identity. The agent invents a target-specific composition, character transformation, and joke. The supplied servo-skull is an Imperial example, not a requirement to use the same character for every faction.
 
-To replay a variation, pass the seed recorded in its `tokens.json`:
+To reproduce a favored variant, use its recorded seed:
 
 ```bash
-node bin/grimdarkify.mjs kit --faction drukhari --seed my-favorite --out ./replay
+node bin/grimdarkify.mjs kit --faction adeptus-arbites --seed my-favorite --out ./replay
 ```
 
-Randomness follows the profile's identity: T’au remains technical and ceramic; Drukhari stays sharp and lacquered; Orks remain assembled from rough plates. It changes visible design properties, not just filenames or hidden IDs. This is constrained procedural generation; the optional coding-agent workflow provides deeper, model-driven redesigns using your existing agent subscription/provider.
-
-## Restyle a website
-
-For an editable local HTML document, put the new file beside the source so relative resources keep working:
+## Transform HTML or a URL
 
 ```bash
-node bin/grimdarkify.mjs html ./index.html --out ./index.grimdark.html --faction necrons
+node bin/grimdarkify.mjs html ./index.html --out ./index.grimdark.html --faction adeptus-arbites
+node bin/grimdarkify.mjs website https://example.com --out ./parody.html --faction orks
 ```
 
-Or fetch a public URL and produce a local static preview:
+Local outputs stay beside the source so its existing assets continue to resolve. The adapter injects a theatrical theme and crest, adds a familiar, and marks recognizable mascot images such as Nomo/the owl for servo-skull replacement. Existing forms, links, and scripts are preserved.
 
-```bash
-node bin/grimdarkify.mjs website https://example.com --out ./example.grimdark.html --faction drukhari
-```
-
-URL mode fetches HTML, preserves a base URL for remote resources, and injects an original theme plus the fan notice. Existing scripts are preserved and can still contact their original servers. This is a static preview, not a copy of the backend or a complete capture of a client-rendered app. Authenticated sites and complex applications belong in the source-and-agent workflow. Documents with an inline Content Security Policy are left to the project's existing asset pipeline.
-
-For React, Vue, Svelte, native apps, editor themes, or desktop themes, use a generated kit and the [platform guide](skills/grimdarkify-anything/references/platforms.md). There is no claim that CSS can reskin arbitrary closed binaries.
+URL mode fetches a static HTML snapshot. Original resources and scripts can still contact their own servers; this does not copy a backend or fully capture a client-rendered app. For a full source transformation, let a browser-capable coding agent apply a generated brief. Pages with an inline Content Security Policy use their existing asset pipeline instead of injected styles.
 
 ## Use with your coding agent
 
-Install the skill into your target project's skill directory. For Claude Code:
+For Claude Code, copy the skill into the target project:
 
 ```bash
 mkdir -p /path/to/your-app/.claude/skills
 cp -R skills/grimdarkify-anything /path/to/your-app/.claude/skills/
 ```
 
-For an agent using the `.agents/skills` convention, use that directory instead. Or simply give your agent [SKILL.md](skills/grimdarkify-anything/SKILL.md) and a generated brief.
+Use `.agents/skills` for agents following that convention, or give your agent [SKILL.md](skills/grimdarkify-anything/SKILL.md) and a generated brief directly.
 
-Example prompt:
+Example request:
 
-> Grimdarkify this app as Drukhari. Use a fresh kit and an original composition. Preserve navigation, data, accessibility, and the working forms. Include the unofficial fan notice on every screen and export. Show me the result on mobile and desktop.
+> Grimdarkify this website as Adeptus Arbites. Make it an absolutely over-the-top parody: giant gothic lettering, a fortress-courthouse, armored panels, wax seals, and the mascot replaced with a servo-skull. Parody the copy and branding while keeping the actual functions working. Use a fresh design and include the unofficial notice in every export. Show the real result on phone and desktop.
 
-The source inventory command helps the agent find the target's stack without running it:
+Use `node bin/grimdarkify.mjs inspect /path/to/app --json` to inventory source files and package names without executing the target. It skips hidden files, sensitive names, dependency trees, and symlinks. Native apps need editable source or a supported theme interface; the [platform guide](skills/grimdarkify-anything/references/platforms.md) covers those mappings.
 
-```bash
-node bin/grimdarkify.mjs inspect /path/to/your-app --json
-```
-
-It inventories a bounded source tree and package names, skips hidden files, sensitive filenames, dependency trees, and symlinks, and does not execute target code.
-
-## Run the demo and checks
+## Demo and validation
 
 ```bash
 npm test
 npm run demo
-# Open http://127.0.0.1:4173
+# http://127.0.0.1:4173
 ```
 
-The demo has a searchable faction selector, a Reforge button, before/after mode, working task controls, and CSS/token/brief/SVG exports. `npm run build` produces `_site/` for static hosting. GitHub Pages publishes it from the included workflow.
+The showcase has a searchable faction selector, fresh Reforge action, mundane/parody comparison, a fictional search interaction, mascot dialogue, and style/brief/crest exports. `npm run build` produces `_site/`; the included GitHub Pages workflow publishes it.
 
-## Fan work, references, and rights
+## Unofficial fan work
 
-**UNOFFICIAL · NON-COMMERCIAL FAN WORK.** Not affiliated with, endorsed, sponsored, or approved by Games Workshop. Warhammer 40,000 and associated IP belong to Games Workshop Limited. No official logos or artwork are included. Fan outputs are for free, non-commercial use.
+**UNOFFICIAL · NON-COMMERCIAL FAN WORK.** Not affiliated with, endorsed, sponsored, or approved by Games Workshop. Warhammer 40,000 and associated IP belong to Games Workshop Limited. No official logos or official artwork are supplied. Fan outputs remain free and non-commercial.
 
-Every generated kit and themed page carries the notice; it is built into document exports and watermarks. When sharing a screenshot, include the small print inside the image. The [full notice](NOTICE.md) is a project rule, not a licence or a claim that fan-art guidance automatically permits apps or AI-generated fan content.
+The [notice](NOTICE.md) is a project requirement, not a licence or a claim that static fan-art guidance automatically permits apps or AI-generated fan content. Keep it inside screenshots and standalone images, not just in surrounding captions.
 
-The aesthetic draws on [linked official artwork references](docs/research.md). The implementation uses original palettes, materials, and geometric decoration. It does not redistribute scraped art or train a model on it. Original toolkit code is [MIT licensed](LICENSE); that licence grants no rights to Games Workshop IP or other third-party work.
+[Official artwork research](docs/research.md) informs original visual interpretations. There is no scraped-art bundle or model training on GW content. [Original tooling code is MIT licensed](LICENSE); [fonts retain their own OFL licences](assets/ASSET-CREDITS.md), and no third-party IP rights are granted.
 
-Conceptually inspired by the agent-toolkit approach of [Reverse Engineer Anything](https://github.com/alex-luncan/reverse-engineer-anything) and [Craft Anything](https://github.com/storytold/craft-anything). This is a small visual transformation toolkit, independently implemented.
+Inspired by the agent-toolkit approach of [Reverse Engineer Anything](https://github.com/alex-luncan/reverse-engineer-anything) and [Craft Anything](https://github.com/storytold/craft-anything), independently implemented for wildly excessive visual parody.

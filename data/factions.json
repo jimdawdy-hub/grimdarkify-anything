@@ -1,5 +1,34 @@
 [
   {
+    "id": "adeptus-arbites",
+    "name": "Adeptus Arbites",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#080b14",
+      "surface": "#141d2d",
+      "text": "#fff0c9",
+      "muted": "#c6b99e",
+      "accent": "#f2cb68",
+      "secondary": "#ff5c55"
+    },
+    "motifs": [
+      "fortress-courthouse buttresses",
+      "gilded judicial skulls",
+      "red wax writs and chains",
+      "black armor with gold relief",
+      "servo-skull law librarian"
+    ],
+    "frames": [
+      "arch",
+      "plate"
+    ],
+    "type": "serif",
+    "summary": "An utterly excessive black-and-gold fortress tribunal: gothic script, armored law books, red emergency lumens, chained writs, and a servo-skull clerk.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/DHbfyzyv/adeptus-arbites-exaction-squads-are-simply-too-good-for-regular-police-work/"
+  },
+  {
     "id": "space-marines",
     "name": "Space Marines",
     "group": "Imperium",
@@ -7,11 +36,11 @@
     "legion": null,
     "colors": {
       "background": "#101722",
-      "surface": "#1A2B41",
+      "surface": "#122b5e",
       "text": "#ECE7D9",
       "muted": "#AAAFAF",
-      "accent": "#719DDE",
-      "secondary": "#BBA36C"
+      "accent": "#5ea6ff",
+      "secondary": "#f9d06b"
     },
     "motifs": [
       "armour plating",
@@ -268,11 +297,11 @@
     "legion": null,
     "colors": {
       "background": "#181313",
-      "surface": "#322321",
+      "surface": "#3a131a",
       "text": "#EDE6D7",
       "muted": "#B8AAA1",
-      "accent": "#DA7970",
-      "secondary": "#9BBF9A"
+      "accent": "#ff6353",
+      "secondary": "#ffd362"
     },
     "motifs": [
       "service diagrams",
@@ -616,11 +645,11 @@
     "legion": null,
     "colors": {
       "background": "#10171B",
-      "surface": "#1E2D34",
+      "surface": "#102f32",
       "text": "#DEE8E6",
       "muted": "#9DB3B4",
-      "accent": "#75D4C7",
-      "secondary": "#BD92D5"
+      "accent": "#39ffc8",
+      "secondary": "#e988ff"
     },
     "motifs": [
       "blade-shaped fins",
@@ -703,11 +732,11 @@
     "legion": null,
     "colors": {
       "background": "#0D1714",
-      "surface": "#1B3027",
+      "surface": "#163825",
       "text": "#E2ECE0",
       "muted": "#9FB6A4",
-      "accent": "#91DBA1",
-      "secondary": "#A5B9B4"
+      "accent": "#87ff39",
+      "secondary": "#73ffe1"
     },
     "motifs": [
       "monolithic bays",
@@ -732,11 +761,11 @@
     "legion": null,
     "colors": {
       "background": "#191B11",
-      "surface": "#333723",
+      "surface": "#283516",
       "text": "#EEE8C8",
       "muted": "#BAB995",
-      "accent": "#C5D17F",
-      "secondary": "#D7A16B"
+      "accent": "#c7ff2f",
+      "secondary": "#ff7039"
     },
     "motifs": [
       "mismatched scrap plates",
@@ -761,11 +790,11 @@
     "legion": null,
     "colors": {
       "background": "#132029",
-      "surface": "#273D49",
+      "surface": "#123b56",
       "text": "#EDF0E6",
       "muted": "#ACBEC4",
-      "accent": "#D9B281",
-      "secondary": "#91D3D8"
+      "accent": "#ffd57b",
+      "secondary": "#53e8ff"
     },
     "motifs": [
       "clean segmented shells",
@@ -790,11 +819,11 @@
     "legion": null,
     "colors": {
       "background": "#1B1322",
-      "surface": "#35263E",
+      "surface": "#392046",
       "text": "#EFE6D5",
       "muted": "#B9A9C0",
-      "accent": "#CB9DE3",
-      "secondary": "#C9B98A"
+      "accent": "#f29aff",
+      "secondary": "#ecdb95"
     },
     "motifs": [
       "overlapping carapace",

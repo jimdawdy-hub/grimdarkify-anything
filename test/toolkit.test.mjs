@@ -45,6 +45,31 @@ test('explicit seeds reproduce a favored design and its stylesheet', () => {
   assert.equal(renderCss(forge(faction, { seed: 'favorite-123' }), notice, baseCss), renderCss(forge(faction, { seed: 'favorite-123' }), notice, baseCss));
 });
 
+test('Imperial designs ship actual blackletter fonts, artwork and their licences offline', () => {
+  for (const faction of factions.filter((f) => f.group === 'Imperium')) {
+    const design = forge(faction);
+    assert.match(design.tokens['--gd-display'], /GD Cathedral|GD Scripture|GD Corsair/);
+  }
+  assert.ok(selectFaction(factions, 'adeptus-arbites'));
+  assert.match(baseCss, /@font-face\{font-family:"GD Cathedral";src:url\("data:font\/ttf;base64,/);
+  assert.match(baseCss, /data:image\/png;base64,/);
+  assert.match(baseCss, /background-image:url\('data:image\/png;base64,/);
+  assert.match(baseCss, /SIL OPEN FONT LICENSE/i);
+  assert.ok(!baseCss.includes('__GD_SKULL__'));
+  assert.ok(!baseCss.includes('__GD_TRIBUNAL__'));
+});
+
+test('an explicit owl mascot is reimagined without changing unrelated product imagery', () => {
+  const original = source.replace('<main ', '<img src="nomo-owl.png" alt="Nomo the research owl" width="240"><img src="product.png" alt="Product screenshot"><main ');
+  const output = themeHtml(original, forge(selectFaction(factions, 'adeptus-arbites')), notice, baseCss);
+  assert.ok(output.includes('data-gd-mascot="servo-skull"'));
+  assert.match(output, /<img[^>]+src="data:image\/png;base64,/);
+  assert.ok(output.includes('alt="A servo-skull parody of this website’s original mascot"'));
+  assert.ok(output.includes('<img src="product.png" alt="Product screenshot">'));
+  assert.ok(output.includes('class="gd-page-crest"'));
+  assert.ok(output.includes('<form action="/save" method="post">'));
+});
+
 test('generated text, muted labels and accents stay readable across all faction surfaces', () => {
   for (const faction of factions) for (let i = 0; i < 10; i++) {
     const design = forge(faction, { seed: `contrast-${i}` });
@@ -95,6 +120,8 @@ test('every kit artifact carries notice text or metadata; existing work is never
     assert.ok(text.includes('Games Workshop'), file);
   }
   const original = await readFile(join(out, 'theme.css'), 'utf8');
+  assert.match(await readFile(join(out, 'study.svg'), 'utf8'), /<image href="data:image\/png;base64,/);
+  assert.match(await readFile(join(out, 'FONT-LICENSES.txt'), 'utf8'), /SIL OPEN FONT LICENSE/i);
   await assert.rejects(createKit(out, factions[0], forge(factions[0]), notice, baseCss), { code: 'EEXIST' });
   assert.equal(await readFile(join(out, 'theme.css'), 'utf8'), original);
 }));

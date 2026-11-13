@@ -3,13 +3,14 @@ import { resolve, dirname, basename, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { forge, noticeText, noticeHtml, watermarkSvg, buildBrief, cssVariables, escapeHtml } from './forge.mjs';
 import { studySvg } from './study.mjs';
+import { compileTheme } from './assets.mjs';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
 export async function loadData() {
   const [factions, notice, baseCss] = await Promise.all([
     readFile(new URL('../data/factions.json', import.meta.url), 'utf8').then(JSON.parse),
     readFile(new URL('../data/notice.json', import.meta.url), 'utf8').then(JSON.parse),
-    readFile(new URL('../assets/base.css', import.meta.url), 'utf8')
+    compileTheme()
   ]);
   return { factions, notice, baseCss };
 }
@@ -64,7 +65,8 @@ export function themeHtml(html, design, notice, baseCss, { baseUrl } = {}) {
   const head = tags.find((tag) => tag.name === 'head' && !tag.closing);
   const headClose = tags.find((tag) => tag.name === 'head' && tag.closing);
   const bodyClose = tags.find((tag) => tag.name === 'body' && tag.closing);
-  if (!root || !head || !headClose || !bodyClose) throw new Error('Expected a complete HTML document with html, head, and closing body tags. Use kit for source components.');
+  const bodyOpen = tags.find((tag) => tag.name === 'body' && !tag.closing);
+  if (!root || !head || !headClose || !bodyOpen || !bodyClose) throw new Error('Expected a complete HTML document with html, head, and closing body tags. Use kit for source components.');
   if (tags.some((tag) => /\bdata-grimdark(?:\s|=|>)/i.test(tag.text))) throw new Error('This document is already themed. Reforge its original source to create another variation.');
   if (tags.some((tag) => tag.name === 'meta' && /http-equiv\s*=\s*["']?content-security-policy/i.test(tag.text))) throw new Error('This page declares a Content Security Policy. Use kit and integrate the stylesheet through the source project instead.');
   const css = renderCss(design, notice, baseCss).replace(/<\/style/gi, '<\\/style');
@@ -73,15 +75,32 @@ export function themeHtml(html, design, notice, baseCss, { baseUrl } = {}) {
     { at: headClose.start, value: `\n<style id="grimdarkify-theme">\n${css}\n</style>\n` },
     { at: bodyClose.start, value: `\n${noticeHtml(notice)}\n` }
   ];
+  // Mascot replacement is scoped to explicit mascot/character markers. Product
+  // imagery, ordinary logos, links and interactive application code remain intact.
+  const mascots = tags.filter((tag) => tag.name === 'img' && /\b(nomo|owl|mascot)\b/i.test(tag.text));
+  const mascotSource = baseCss.match(/data:image\/png;base64,[A-Za-z0-9+/=]+/)?.[0];
+  for (const tag of mascots) {
+    let value = tag.text.replace(/^<img/i, '<img data-gd-mascot="servo-skull"');
+    let replacedSource = false;
+    value = value.replace(/\s+([\w:-]+)(?:\s*=\s*("[^"]*"|'[^']*'|[^\s>]+))?/g, (attribute, name) => {
+      if (['srcset', 'sizes'].includes(name.toLowerCase())) return '';
+      if (name.toLowerCase() === 'src' && mascotSource) { replacedSource = true; return ` src="${mascotSource}"`; }
+      if (name.toLowerCase() === 'alt') return ' alt="A servo-skull parody of this website’s original mascot"';
+      return attribute;
+    });
+    if (!replacedSource && mascotSource) value = value.replace(/^<img/i, `<img src="${mascotSource}"`);
+    changes.push({ at: tag.start, end: tag.end, value });
+  }
+  if (bodyOpen) changes.push({ at: bodyOpen.end, value: `\n<div class="gd-page-crest" aria-label="Unofficial faction parody">${escapeHtml(design.name)} · ${escapeHtml(design.spectacle ?? 'An unreasonable quantity of gothic ornament')} · UNOFFICIAL FAN PARODY</div>${mascots.length ? '' : '<aside class="gd-familiar" role="img" aria-label="A flying servo-skull research familiar"></aside>'}\n` });
   if (baseUrl && !tags.some((tag) => tag.name === 'base')) changes.push({ at: head.end, value: `\n<base href="${escapeHtml(baseUrl)}">\n` });
-  for (const change of changes.sort((a, b) => b.at - a.at)) html = html.slice(0, change.at) + change.value + html.slice(change.at);
+  for (const change of changes.sort((a, b) => b.at - a.at)) html = html.slice(0, change.at) + change.value + html.slice(change.end ?? change.at);
   return html;
 }
 
 export async function fetchHtml(url) {
   const parsed = new URL(url);
   if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error('Website URLs must use http or https.');
-  const response = await fetch(parsed, { signal: AbortSignal.timeout(20_000), headers: { Accept: 'text/html', 'User-Agent': 'GrimdarkifyAnything/0.1 (unofficial fan toolkit)' } });
+  const response = await fetch(parsed, { signal: AbortSignal.timeout(20_000), headers: { Accept: 'text/html', 'User-Agent': 'GrimdarkifyAnything/0.2 (unofficial fan toolkit)' } });
   if (!response.ok) throw new Error(`Website returned HTTP ${response.status}. Use local source or your browser-based agent for authenticated sites.`);
   if (!/text\/html|application\/xhtml\+xml/i.test(response.headers.get('content-type') ?? '')) throw new Error('The URL did not return an HTML page.');
   const chunks = []; let size = 0;
@@ -102,17 +121,21 @@ export async function writeNew(path, value) {
   await writeFile(path, value, { flag: 'wx' });
 }
 export function previewHtml(design, notice) {
-  return `<!doctype html><html lang="en" ${designAttributes(design)}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(design.name)} · Grimdarkify</title><link rel="stylesheet" href="theme.css"><style>body{max-width:64rem;margin:3rem auto;padding:0 1rem}main{display:grid;gap:1.5rem}h1{font-size:clamp(2rem,6vw,4rem)}label{display:block;margin:.75rem 0}input{max-width:100%;box-sizing:border-box}</style></head><body><header><p class="gd-meta">Grimdarkify Anything · ${escapeHtml(design.name)}</p><h1>The work endures.</h1><p class="gd-muted">A fresh ${escapeHtml(design.frame)} / ${escapeHtml(design.texture)} interpretation. Seed: ${escapeHtml(design.seed)}</p></header><main><section class="gd-panel" aria-labelledby="project-title"><p class="gd-meta">Project status · Active</p><h2 id="project-title">Project Atlas</h2><p>Keep the product useful. Make its world feel ancient.</p><label>Project name <input value="Project Atlas"></label><button type="button" onclick="this.textContent='Project saved'">Save project</button></section><section class="gd-panel"><h2>Deployment manifest</h2><table><thead><tr><th>Module</th><th>Status</th></tr></thead><tbody><tr><td>Navigation</td><td>Operational</td></tr><tr><td>Accessibility</td><td>Preserved</td></tr></tbody></table></section></main>${noticeHtml(notice)}</body></html>\n`;
+  return `<!doctype html><html lang="en" ${designAttributes(design)}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(design.name)} · Grimdarkify</title><link rel="stylesheet" href="theme.css"><style>body{max-width:76rem;margin:2rem auto;padding:0 1.5rem}.relic-hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:2rem;padding:3rem 0}.relic-hero h1{font-size:clamp(3.5rem,7vw,7rem);margin:.2em 0}.relic-hero .gd-familiar{float:none;width:100%;height:480px;margin:0}.relic-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 0}.relic-grid h2{font-size:2.8rem}.relic-grid label{display:block;margin:1rem 0}.relic-grid input{max-width:100%;box-sizing:border-box}.gd-meta{line-height:1.8}@media(max-width:650px){.relic-hero,.relic-grid{grid-template-columns:1fr}.relic-hero .gd-familiar{height:320px}.relic-hero{padding:1rem 0}}</style></head><body><div class="gd-page-crest">${escapeHtml(design.name)} · Unofficial fan parody · Excess has been authorized</div><header class="relic-hero"><div><p class="gd-meta">GRIMDARKIFY ANYTHING / ${escapeHtml(design.name)}</p><h1>Your work.<br>Under oath.</h1><p>This perfectly reasonable interface has been requisitioned by the art department.</p><p class="gd-meta">${escapeHtml(design.spectacle)}<br>Ritual seed: ${escapeHtml(design.seed)}</p></div><aside class="gd-familiar" role="img" aria-label="An extravagant servo-skull research familiar"></aside></header><main class="relic-grid"><section class="gd-panel" aria-labelledby="project-title"><p class="gd-meta">DESIGNATION / A MATTER OF IMPERIAL IMPORTANCE</p><h2 id="project-title">The Great Work</h2><p>Your actual controls still work. Their sense of proportion has been confiscated.</p><label>Project designation <input value="Project Atlas"></label><button type="button" onclick="this.textContent='Writ recorded. The archive remembers.'">Consecrate this project</button></section><section class="gd-panel"><p class="gd-meta">PERPETUAL AUDIT / SCRUTINY IS MANDATORY</p><h2>The manifest endures.</h2><table><thead><tr><th>Relic</th><th>State</th></tr></thead><tbody><tr><td>Navigation</td><td>Operational</td></tr><tr><td>Keyboard access</td><td>Sanctified</td></tr><tr><td>Tasteful restraint</td><td>Excommunicated</td></tr></tbody></table></section></main>${noticeHtml(notice)}</body></html>\n`;
 }
+
 export async function createKit(out, faction, design, notice, baseCss) {
   await mkdir(out); // An existing directory is never merged with or overwritten.
+  const fontFiles = (await readdir(new URL('../assets/fonts/', import.meta.url))).filter((name) => name.endsWith('-OFL.txt'));
+  const licenses = await Promise.all(fontFiles.map(async (name) => `\n\n=== ${name} ===\n${await readFile(new URL(`../assets/fonts/${name}`, import.meta.url), 'utf8')}`));
   const files = {
     'theme.css': renderCss(design, notice, baseCss),
     'tokens.json': JSON.stringify({ ...design, notice }, null, 2) + '\n',
     'NOTICE.txt': noticeText(notice) + '\n',
+    'FONT-LICENSES.txt': noticeText(notice) + '\n\nBundled fonts: original SIL Open Font Licences\n' + licenses.join(''),
     'notice.html': noticeHtml(notice) + '\n',
     'watermark.svg': watermarkSvg(notice),
-    'study.svg': studySvg(faction, design, notice),
+    'study.svg': studySvg(faction, design, notice, { mascot: baseCss.match(/data:image\/png;base64,[A-Za-z0-9+/=]+/)?.[0] }),
     'brief.md': buildBrief(faction, design, notice),
     'preview.html': previewHtml(design, notice)
   };
