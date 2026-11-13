@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "space-marines",
+    "name": "Space Marines",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#101722",
+      "surface": "#1A2B41",
+      "text": "#ECE7D9",
+      "muted": "#AAAFAF",
+      "accent": "#719DDE",
+      "secondary": "#BBA36C"
+    },
+    "motifs": [
+      "armour plating",
+      "chapter archives",
+      "orbital coordinates",
+      "campaign plaques",
+      "recessed instruments"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "sans",
+    "summary": "Disciplined blue-armoured command systems with monumental but functional hierarchy.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "black-templars",
+    "name": "Black Templars",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#111314",
+      "surface": "#24282A",
+      "text": "#F0E9D6",
+      "muted": "#AFA99C",
+      "accent": "#D7C7A1",
+      "secondary": "#A54D43"
+    },
+    "motifs": [
+      "oath scrolls",
+      "crusade records",
+      "chainlike dividers",
+      "ivory panels",
+      "worn iron edges"
+    ],
+    "frames": [
+      "arch",
+      "plate"
+    ],
+    "type": "serif",
+    "summary": "Stark black-and-ivory crusader architecture with heavy oath-bound framing.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "blood-angels",
+    "name": "Blood Angels",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#1B1013",
+      "surface": "#332026",
+      "text": "#F3E5CE",
+      "muted": "#BAA69D",
+      "accent": "#DE7166",
+      "secondary": "#C8AD6D"
+    },
+    "motifs": [
+      "reliquary niches",
+      "scarlet lacquer",
+      "gilded filigree",
+      "tear-shaped insets",
+      "memorial banners"
+    ],
+    "frames": [
+      "arch",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "Crimson ceremonial elegance with warm gold and restrained mourning details.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "dark-angels",
+    "name": "Dark Angels",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#0D1915",
+      "surface": "#1A3027",
+      "text": "#EAE4CF",
+      "muted": "#A8B4A6",
+      "accent": "#79AE88",
+      "secondary": "#C2AB71"
+    },
+    "motifs": [
+      "cloister bays",
+      "sealed records",
+      "bone inlays",
+      "hooded silhouettes",
+      "layered gate panels"
+    ],
+    "frames": [
+      "arch",
+      "rail"
+    ],
+    "type": "serif",
+    "summary": "Secretive forest-green cloisters and bone-colored archival surfaces.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "deathwatch",
+    "name": "Deathwatch",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#101317",
+      "surface": "#222831",
+      "text": "#E6E8E5",
+      "muted": "#A8B0BA",
+      "accent": "#AABDCF",
+      "secondary": "#C25C54"
+    },
+    "motifs": [
+      "silver service panels",
+      "mission ciphers",
+      "specimen bays",
+      "tactical rails",
+      "individual dossier tabs"
+    ],
+    "frames": [
+      "chamfer",
+      "rail"
+    ],
+    "type": "mono",
+    "summary": "Black-and-silver specialist equipment with precise red priority marks.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "grey-knights",
+    "name": "Grey Knights",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#12191F",
+      "surface": "#28323B",
+      "text": "#EEF0E8",
+      "muted": "#ACB7BE",
+      "accent": "#C0D2DF",
+      "secondary": "#C67669"
+    },
+    "motifs": [
+      "silver armour bands",
+      "warded compartments",
+      "inscribed margins",
+      "sealed reliquaries",
+      "crimson controls"
+    ],
+    "frames": [
+      "arch",
+      "chamfer"
+    ],
+    "type": "serif",
+    "summary": "Cold silver armor and orderly protective inscriptions around high-contrast content.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "space-wolves",
+    "name": "Space Wolves",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#131A20",
+      "surface": "#26343F",
+      "text": "#ECE9DD",
+      "muted": "#AEB7B8",
+      "accent": "#8FB7D1",
+      "secondary": "#CDB477"
+    },
+    "motifs": [
+      "frosted steel",
+      "saga plaques",
+      "carved edge notches",
+      "warm leather straps",
+      "storm-weathered panels"
+    ],
+    "frames": [
+      "plate",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "Storm-grey field equipment softened by saga-like carving and warm ochre accents.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "adepta-sororitas",
+    "name": "Adepta Sororitas",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#181215",
+      "surface": "#302329",
+      "text": "#F3EBDD",
+      "muted": "#BAA9AD",
+      "accent": "#D07972",
+      "secondary": "#C6AE79"
+    },
+    "motifs": [
+      "candlelit niches",
+      "illuminated margins",
+      "wax seals",
+      "ceremonial red cloth",
+      "choir-like vertical rhythm"
+    ],
+    "frames": [
+      "arch",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "An ecclesiastical archive of ivory, blackened metal, and candlelit crimson.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "adeptus-custodes",
+    "name": "Adeptus Custodes",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#19160F",
+      "surface": "#342D1D",
+      "text": "#F4EBD4",
+      "muted": "#BDAF90",
+      "accent": "#DEC17A",
+      "secondary": "#C17462"
+    },
+    "motifs": [
+      "gilded surfaces",
+      "palace symmetry",
+      "gemlike indicators",
+      "ceremonial plinths",
+      "fine engraved lines"
+    ],
+    "frames": [
+      "arch",
+      "plate"
+    ],
+    "type": "serif",
+    "summary": "Restrained palace grandeur in burnished gold and dark ceremonial red.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "adeptus-mechanicus",
+    "name": "Adeptus Mechanicus",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#181313",
+      "surface": "#322321",
+      "text": "#EDE6D7",
+      "muted": "#B8AAA1",
+      "accent": "#DA7970",
+      "secondary": "#9BBF9A"
+    },
+    "motifs": [
+      "service diagrams",
+      "cable conduits",
+      "serial-number rails",
+      "red enamel panels",
+      "ritual instrument clusters"
+    ],
+    "frames": [
+      "rail",
+      "plate"
+    ],
+    "type": "mono",
+    "summary": "A red-lacquer machine shrine with cabling, instrumentation, and technical marginalia.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "astra-militarum",
+    "name": "Astra Militarum",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#141A15",
+      "surface": "#293328",
+      "text": "#E9E6D2",
+      "muted": "#B0B69F",
+      "accent": "#ACBC82",
+      "secondary": "#C6A06B"
+    },
+    "motifs": [
+      "field forms",
+      "stencilled identifiers",
+      "map-grid overlays",
+      "ration-paper labels",
+      "riveted cases"
+    ],
+    "frames": [
+      "plate",
+      "rail"
+    ],
+    "type": "mono",
+    "summary": "Olive-drab field command built around legible orders, maps, and logistics.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "imperial-agents",
+    "name": "Imperial Agents",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#191214",
+      "surface": "#302329",
+      "text": "#F0E4D5",
+      "muted": "#B8A7A8",
+      "accent": "#D47D76",
+      "secondary": "#C4AC76"
+    },
+    "motifs": [
+      "redaction bars",
+      "case-file tabs",
+      "sealed evidence",
+      "archival stamps",
+      "coded witness records"
+    ],
+    "frames": [
+      "rail",
+      "arch"
+    ],
+    "type": "serif",
+    "summary": "A confidential black-and-crimson dossier system with parchment evidence panels.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "imperial-knights",
+    "name": "Imperial Knights",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#121820",
+      "surface": "#26313F",
+      "text": "#EEE8D7",
+      "muted": "#AFB6BB",
+      "accent": "#A5B9DC",
+      "secondary": "#CDB072"
+    },
+    "motifs": [
+      "quartered colour fields",
+      "heraldic nameplates",
+      "armoured shoulders",
+      "household banners",
+      "service rivets"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "serif",
+    "summary": "A heraldic war-engine cockpit with broad armored panels and household color blocks.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "chaos-daemons",
+    "name": "Chaos Daemons",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#19101D",
+      "surface": "#302038",
+      "text": "#EEE1E9",
+      "muted": "#B9A5BA",
+      "accent": "#CA8FE4",
+      "secondary": "#E18B68"
+    },
+    "motifs": [
+      "unstable halos",
+      "warped apertures",
+      "organic ridges",
+      "fractured symmetry",
+      "smoke-like layers"
+    ],
+    "frames": [
+      "scallop",
+      "chamfer"
+    ],
+    "type": "serif",
+    "summary": "Unearthly violet structures and controlled asymmetry surrounding calm readable content.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "chaos-knights",
+    "name": "Chaos Knights",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#191412",
+      "surface": "#322923",
+      "text": "#EDE2D1",
+      "muted": "#BAAC9B",
+      "accent": "#CD9B6E",
+      "secondary": "#BF786F"
+    },
+    "motifs": [
+      "split armour plates",
+      "rusted hangars",
+      "thornlike corners",
+      "uneven heraldic fields",
+      "damaged service gauges"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "serif",
+    "summary": "Rust-dark giant-engine interfaces with cracked armor and aggressive angular seams.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "chaos-space-marines",
+    "name": "Chaos Space Marines",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#191114",
+      "surface": "#322027",
+      "text": "#EEE3D9",
+      "muted": "#B7A5AB",
+      "accent": "#D47C72",
+      "secondary": "#BCA16C"
+    },
+    "motifs": [
+      "jagged armour seams",
+      "blackened brass",
+      "damaged campaign plaques",
+      "barbed dividers",
+      "corrupted symmetry"
+    ],
+    "frames": [
+      "chamfer",
+      "plate"
+    ],
+    "type": "serif",
+    "summary": "Blackened crimson warplate with brass framing and selective structural distortion.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "death-guard",
+    "name": "Death Guard",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#171B12",
+      "surface": "#2C3423",
+      "text": "#EEE8CC",
+      "muted": "#B5B89B",
+      "accent": "#BAC77D",
+      "secondary": "#BC9770"
+    },
+    "motifs": [
+      "pitted metal",
+      "oxidized fittings",
+      "stained parchment",
+      "weathered vents",
+      "blistered panel edges"
+    ],
+    "frames": [
+      "plate",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "Decayed olive and bone surfaces with patina contained around readable task areas.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "emperors-children",
+    "name": "Emperor's Children",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#21131E",
+      "surface": "#40283D",
+      "text": "#F4DFEB",
+      "muted": "#C1A7BB",
+      "accent": "#E89FCF",
+      "secondary": "#D1B580"
+    },
+    "motifs": [
+      "velvet-dark fields",
+      "polished ornament",
+      "dramatic asymmetry",
+      "gemlike controls",
+      "lavish layered trims"
+    ],
+    "frames": [
+      "scallop",
+      "chamfer"
+    ],
+    "type": "serif",
+    "summary": "Decadent magenta, midnight plum, and polished metal with theatrical focal points.",
+    "source": "https://www.warhammer-community.com/en-gb/topics/emperors-children/"
+  },
+  {
+    "id": "thousand-sons",
+    "name": "Thousand Sons",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#101B24",
+      "surface": "#20394A",
+      "text": "#EBE4CC",
+      "muted": "#A6BAC0",
+      "accent": "#7AC9D5",
+      "secondary": "#D2B772"
+    },
+    "motifs": [
+      "stepped stone borders",
+      "nested archives",
+      "arcane rings",
+      "gold-edged recesses",
+      "luminous knowledge nodes"
+    ],
+    "frames": [
+      "rail",
+      "arch"
+    ],
+    "type": "serif",
+    "summary": "Turquoise-and-gold occult scholarship with stepped framing and composed luminous accents.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "world-eaters",
+    "name": "World Eaters",
+    "group": "Chaos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#211312",
+      "surface": "#402621",
+      "text": "#F2E2CE",
+      "muted": "#BDA89A",
+      "accent": "#EB8A6D",
+      "secondary": "#C9A573"
+    },
+    "motifs": [
+      "brutal red slabs",
+      "impact scoring",
+      "chainlike edge rhythm",
+      "bold arena numerals",
+      "heavy brass brackets"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "sans",
+    "summary": "Violent red and brass equipment with blunt hierarchy and heavily reinforced edges.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "aeldari",
+    "name": "Aeldari",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#121C22",
+      "surface": "#253842",
+      "text": "#E9F0E9",
+      "muted": "#A6BBC0",
+      "accent": "#94D6D2",
+      "secondary": "#D2B799"
+    },
+    "motifs": [
+      "flowing arches",
+      "tapered fins",
+      "jewel-like controls",
+      "bone-smooth surfaces",
+      "long curved dividers"
+    ],
+    "frames": [
+      "arch",
+      "scallop"
+    ],
+    "type": "sans",
+    "summary": "Ancient elegance expressed through sweeping curves, pale materials, and jewel-like light.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "drukhari",
+    "name": "Drukhari",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#10171B",
+      "surface": "#1E2D34",
+      "text": "#DEE8E6",
+      "muted": "#9DB3B4",
+      "accent": "#75D4C7",
+      "secondary": "#BD92D5"
+    },
+    "motifs": [
+      "blade-shaped fins",
+      "razor-thin borders",
+      "poison-lit recesses",
+      "sinister negative space",
+      "lacquered shadow planes"
+    ],
+    "frames": [
+      "chamfer",
+      "scallop"
+    ],
+    "type": "sans",
+    "summary": "Predatory black-green elegance with knife-edge silhouettes and precise toxic light.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "genestealer-cults",
+    "name": "Genestealer Cults",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#1C1620",
+      "surface": "#342A3B",
+      "text": "#EFE6D7",
+      "muted": "#B7ACBB",
+      "accent": "#BB9FD7",
+      "secondary": "#D8A36D"
+    },
+    "motifs": [
+      "industrial placards",
+      "mining infrastructure",
+      "subverted worker forms",
+      "hidden layered marks",
+      "patched workwear textures"
+    ],
+    "frames": [
+      "plate",
+      "rail"
+    ],
+    "type": "mono",
+    "summary": "An industrial underground network with dusty violet, worksite ochre, and concealed detail.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "leagues-of-votann",
+    "name": "Leagues of Votann",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#101C20",
+      "surface": "#22363E",
+      "text": "#E8EDE4",
+      "muted": "#A9BBBC",
+      "accent": "#9DC7D7",
+      "secondary": "#D5AB73"
+    },
+    "motifs": [
+      "thick tool casings",
+      "geometric ancestry records",
+      "rounded machine ports",
+      "durable inset controls",
+      "mineral strata"
+    ],
+    "frames": [
+      "chamfer",
+      "plate"
+    ],
+    "type": "sans",
+    "summary": "Dense precision engineering with sturdy geometry, mineral tones, and warm tool accents.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "necrons",
+    "name": "Necrons",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#0D1714",
+      "surface": "#1B3027",
+      "text": "#E2ECE0",
+      "muted": "#9FB6A4",
+      "accent": "#91DBA1",
+      "secondary": "#A5B9B4"
+    },
+    "motifs": [
+      "monolithic bays",
+      "stepped tomb geometry",
+      "emerald light channels",
+      "silent negative space",
+      "cold metallic ribs"
+    ],
+    "frames": [
+      "rail",
+      "chamfer"
+    ],
+    "type": "mono",
+    "summary": "Ancient machine geometry with recessed emerald light and uncompromising vertical mass.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "orks",
+    "name": "Orks",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#191B11",
+      "surface": "#333723",
+      "text": "#EEE8C8",
+      "muted": "#BAB995",
+      "accent": "#C5D17F",
+      "secondary": "#D7A16B"
+    },
+    "motifs": [
+      "mismatched scrap plates",
+      "oversized rivets",
+      "rough hazard bands",
+      "patched red paint",
+      "bolted signboards"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "sans",
+    "summary": "Jury-rigged scrap engineering in dirty green, battered yellow, and loud red patches.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "tau-empire",
+    "name": "T'au Empire",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#132029",
+      "surface": "#273D49",
+      "text": "#EDF0E6",
+      "muted": "#ACBEC4",
+      "accent": "#D9B281",
+      "secondary": "#91D3D8"
+    },
+    "motifs": [
+      "clean segmented shells",
+      "precise targeting rails",
+      "ceramic insets",
+      "disc-like sensor ports",
+      "uncluttered tactical diagrams"
+    ],
+    "frames": [
+      "chamfer",
+      "rail"
+    ],
+    "type": "sans",
+    "summary": "Clean advanced equipment with warm ceramic color blocks and fine cyan instrumentation.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "tyranids",
+    "name": "Tyranids",
+    "group": "Xenos",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#1B1322",
+      "surface": "#35263E",
+      "text": "#EFE6D5",
+      "muted": "#B9A9C0",
+      "accent": "#CB9DE3",
+      "secondary": "#C9B98A"
+    },
+    "motifs": [
+      "overlapping carapace",
+      "ribbed channels",
+      "membrane-like insets",
+      "tapered organic spines",
+      "bone-and-violet layering"
+    ],
+    "frames": [
+      "scallop",
+      "chamfer"
+    ],
+    "type": "sans",
+    "summary": "A living interface of pale chitin, purple membranes, and repeating protective ribs.",
+    "source": "https://warhammer40000.com/the-armies/"
+  },
+  {
+    "id": "adeptus-titanicus",
+    "name": "Adeptus Titanicus",
+    "group": "Imperium",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#1B1713",
+      "surface": "#372D24",
+      "text": "#EFE5D2",
+      "muted": "#BCAF9C",
+      "accent": "#D9B16E",
+      "secondary": "#C87D6B"
+    },
+    "motifs": [
+      "cathedral-scale bays",
+      "colossal armour plates",
+      "load-bearing columns",
+      "reactor readouts",
+      "ceremonial engine banners"
+    ],
+    "frames": [
+      "arch",
+      "plate"
+    ],
+    "type": "serif",
+    "summary": "An allied god-engine scale study with immense framing and tiny service instrumentation.",
+    "source": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+  },
+  {
+    "id": "dark-mechanicum",
+    "name": "Dark Mechanicum",
+    "group": "Lore extras",
+    "primarch": null,
+    "legion": null,
+    "colors": {
+      "background": "#1A131B",
+      "surface": "#332333",
+      "text": "#EEE0E8",
+      "muted": "#B9A5B6",
+      "accent": "#CC96D4",
+      "secondary": "#CC8973"
+    },
+    "motifs": [
+      "forbidden circuitry",
+      "corrupted instrument bays",
+      "tangled conduits",
+      "occult machine apertures",
+      "uneven red-black plates"
+    ],
+    "frames": [
+      "rail",
+      "chamfer"
+    ],
+    "type": "mono",
+    "summary": "A Horus Heresy lore extra: corrupted machine-cult design, not a claimed standalone 40k codex.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/q0qhnrpr/heraldry-of-the-dark-mechanicum-part-one/"
+  },
+  {
+    "id": "primarch-lion-eljonson",
+    "name": "Lion El'Jonson — Dark Angels",
+    "group": "Primarchs",
+    "primarch": "Lion El'Jonson",
+    "legion": "Dark Angels",
+    "colors": {
+      "background": "#101A16",
+      "surface": "#21372C",
+      "text": "#EEE8D3",
+      "muted": "#AAB9A7",
+      "accent": "#86B58D",
+      "secondary": "#C7B77D"
+    },
+    "motifs": [
+      "knightly hall symmetry",
+      "forest-green recesses",
+      "ivory oath panels",
+      "hidden gate divisions",
+      "blade-straight verticals"
+    ],
+    "frames": [
+      "arch",
+      "rail"
+    ],
+    "type": "serif",
+    "summary": "A solemn knightly court of hidden compartments and austere forest-green stonework.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-fulgrim",
+    "name": "Fulgrim — Emperor's Children",
+    "group": "Primarchs",
+    "primarch": "Fulgrim",
+    "legion": "Emperor's Children",
+    "colors": {
+      "background": "#211626",
+      "surface": "#3D2B47",
+      "text": "#F3E8E7",
+      "muted": "#C1AEC9",
+      "accent": "#CDA7E9",
+      "secondary": "#DEC58C"
+    },
+    "motifs": [
+      "perfect bilateral rhythm",
+      "ivory sculpture niches",
+      "polished purple lacquer",
+      "gold-thread ornament",
+      "jewel-like focal points"
+    ],
+    "frames": [
+      "arch",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "The pursuit of perfection translated into poised violet, ivory, and gold ceremonial composition.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-perturabo",
+    "name": "Perturabo — Iron Warriors",
+    "group": "Primarchs",
+    "primarch": "Perturabo",
+    "legion": "Iron Warriors",
+    "colors": {
+      "background": "#171A1A",
+      "surface": "#303737",
+      "text": "#E8E5D5",
+      "muted": "#B0BBB5",
+      "accent": "#C8BE7B",
+      "secondary": "#BCA285"
+    },
+    "motifs": [
+      "siege geometry",
+      "load diagrams",
+      "measured hazard strips",
+      "layered iron bulwarks",
+      "heavy engineering brackets"
+    ],
+    "frames": [
+      "plate",
+      "rail"
+    ],
+    "type": "mono",
+    "summary": "A calculating siege workshop where iron mass, measurements, and structural logic dominate.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-jaghatai-khan",
+    "name": "Jaghatai Khan — White Scars",
+    "group": "Primarchs",
+    "primarch": "Jaghatai Khan",
+    "legion": "White Scars",
+    "colors": {
+      "background": "#171B1F",
+      "surface": "#303840",
+      "text": "#F1ECE0",
+      "muted": "#B5BFC2",
+      "accent": "#DD9A8A",
+      "secondary": "#D4BF87"
+    },
+    "motifs": [
+      "sweeping speed cuts",
+      "white ceramic panels",
+      "red angled marks",
+      "open horizon spacing",
+      "wind-carved edges"
+    ],
+    "frames": [
+      "chamfer",
+      "rail"
+    ],
+    "type": "sans",
+    "summary": "Fast and spacious white-and-red command surfaces with directional flowing geometry.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-leman-russ",
+    "name": "Leman Russ — Space Wolves",
+    "group": "Primarchs",
+    "primarch": "Leman Russ",
+    "legion": "Space Wolves",
+    "colors": {
+      "background": "#141D24",
+      "surface": "#2B3C49",
+      "text": "#F0EBDD",
+      "muted": "#B1BEC1",
+      "accent": "#A2C8DF",
+      "secondary": "#D8B981"
+    },
+    "motifs": [
+      "storm-blue metal",
+      "saga-like bands",
+      "weathered leather panels",
+      "carved notch patterns",
+      "frosted iron brackets"
+    ],
+    "frames": [
+      "plate",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "An ice-weathered war hall with storm-blue armor, warm hides, and saga-like structure.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-rogal-dorn",
+    "name": "Rogal Dorn — Imperial Fists",
+    "group": "Primarchs",
+    "primarch": "Rogal Dorn",
+    "legion": "Imperial Fists",
+    "colors": {
+      "background": "#1C1A12",
+      "surface": "#393323",
+      "text": "#F1E9CC",
+      "muted": "#BCB395",
+      "accent": "#DEC577",
+      "secondary": "#C18C74"
+    },
+    "motifs": [
+      "fortress courses",
+      "defensive layering",
+      "yellow enamel slabs",
+      "square gate recesses",
+      "unyielding central axes"
+    ],
+    "frames": [
+      "plate",
+      "rail"
+    ],
+    "type": "sans",
+    "summary": "A steadfast fortress interface of ochre-yellow armor, square divisions, and strict order.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-konrad-curze",
+    "name": "Konrad Curze — Night Lords",
+    "group": "Primarchs",
+    "primarch": "Konrad Curze",
+    "legion": "Night Lords",
+    "colors": {
+      "background": "#101522",
+      "surface": "#222B41",
+      "text": "#E6E4EB",
+      "muted": "#A7B1C5",
+      "accent": "#8FA8E4",
+      "secondary": "#C28284"
+    },
+    "motifs": [
+      "nocturnal city verticals",
+      "jagged lightning traces",
+      "blade-like corners",
+      "ominous empty bays",
+      "cold blue-black plates"
+    ],
+    "frames": [
+      "chamfer",
+      "arch"
+    ],
+    "type": "serif",
+    "summary": "A nocturnal judgment chamber with electric-blue accents and sharply controlled menace.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-sanguinius",
+    "name": "Sanguinius — Blood Angels",
+    "group": "Primarchs",
+    "primarch": "Sanguinius",
+    "legion": "Blood Angels",
+    "colors": {
+      "background": "#211617",
+      "surface": "#402A2B",
+      "text": "#F8EDD8",
+      "muted": "#C4AEA1",
+      "accent": "#E7A08A",
+      "secondary": "#E0C58E"
+    },
+    "motifs": [
+      "radiant fan-shaped recesses",
+      "ivory relief bands",
+      "red-gold ceremonial panels",
+      "memorial plinths",
+      "graceful tapering"
+    ],
+    "frames": [
+      "arch",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "A luminous memorial court balancing angelic grace, warm gold, and tragic crimson.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-ferrus-manus",
+    "name": "Ferrus Manus — Iron Hands",
+    "group": "Primarchs",
+    "primarch": "Ferrus Manus",
+    "legion": "Iron Hands",
+    "colors": {
+      "background": "#11171A",
+      "surface": "#29343A",
+      "text": "#E8EBE5",
+      "muted": "#ADBBC0",
+      "accent": "#BCD1DA",
+      "secondary": "#D49A78"
+    },
+    "motifs": [
+      "forged iron seams",
+      "machined grip textures",
+      "industrial measurement rails",
+      "silver reinforcement",
+      "hammered plate layering"
+    ],
+    "frames": [
+      "plate",
+      "rail"
+    ],
+    "type": "mono",
+    "summary": "A stark precision forge of black iron, silver reinforcement, and purposeful industrial mass.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-angron",
+    "name": "Angron — World Eaters",
+    "group": "Primarchs",
+    "primarch": "Angron",
+    "legion": "World Eaters",
+    "colors": {
+      "background": "#231512",
+      "surface": "#432921",
+      "text": "#F2E4CE",
+      "muted": "#C2AA99",
+      "accent": "#EB9B7B",
+      "secondary": "#D4B276"
+    },
+    "motifs": [
+      "arena gate slabs",
+      "chain-link rhythm",
+      "impact-scarred edges",
+      "hot red plate fields",
+      "brutal bracketed numerals"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "sans",
+    "summary": "A gladiatorial command pit with immense red-brass slabs and explosive visual emphasis.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-roboute-guilliman",
+    "name": "Roboute Guilliman — Ultramarines",
+    "group": "Primarchs",
+    "primarch": "Roboute Guilliman",
+    "legion": "Ultramarines",
+    "colors": {
+      "background": "#101B2B",
+      "surface": "#223A56",
+      "text": "#F0EDDA",
+      "muted": "#AABCD0",
+      "accent": "#91BAEA",
+      "secondary": "#D5BE87"
+    },
+    "motifs": [
+      "classical column rhythm",
+      "ordered civic records",
+      "blue enamel panels",
+      "fine gold courses",
+      "balanced tactical grids"
+    ],
+    "frames": [
+      "arch",
+      "rail"
+    ],
+    "type": "serif",
+    "summary": "A rational blue-and-gold civic command system with classical proportion and clear hierarchy.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-mortarion",
+    "name": "Mortarion — Death Guard",
+    "group": "Primarchs",
+    "primarch": "Mortarion",
+    "legion": "Death Guard",
+    "colors": {
+      "background": "#1A1D15",
+      "surface": "#333A27",
+      "text": "#EFE9D1",
+      "muted": "#B8BEA2",
+      "accent": "#C1CF93",
+      "secondary": "#C2A781"
+    },
+    "motifs": [
+      "weathered bone plates",
+      "industrial rebreather vents",
+      "dusty green recesses",
+      "corroded brass joints",
+      "low heavy silhouettes"
+    ],
+    "frames": [
+      "plate",
+      "scallop"
+    ],
+    "type": "serif",
+    "summary": "A stoic reaper-industrial aesthetic of bone, muted green, and oxidized brass.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-magnus-the-red",
+    "name": "Magnus the Red — Thousand Sons",
+    "group": "Primarchs",
+    "primarch": "Magnus the Red",
+    "legion": "Thousand Sons",
+    "colors": {
+      "background": "#241417",
+      "surface": "#45292D",
+      "text": "#F4E6D4",
+      "muted": "#C5ABA8",
+      "accent": "#E9A184",
+      "secondary": "#D5BB80"
+    },
+    "motifs": [
+      "scholarly stepped chambers",
+      "nested arcane circles",
+      "red sandstone fields",
+      "gold-edged manuscripts",
+      "luminous knowledge apertures"
+    ],
+    "frames": [
+      "arch",
+      "rail"
+    ],
+    "type": "serif",
+    "summary": "A red-and-gold scholarly sanctum with layered knowledge chambers and precise arcane light.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-horus-lupercal",
+    "name": "Horus Lupercal — Sons of Horus",
+    "group": "Primarchs",
+    "primarch": "Horus Lupercal",
+    "legion": "Sons of Horus",
+    "colors": {
+      "background": "#12201E",
+      "surface": "#29413B",
+      "text": "#EDE8D5",
+      "muted": "#AFC0B5",
+      "accent": "#A4CDBA",
+      "secondary": "#D5B37D"
+    },
+    "motifs": [
+      "sea-green command plates",
+      "grand campaign banners",
+      "armoured central throne",
+      "bronze service bands",
+      "layered strategic tables"
+    ],
+    "frames": [
+      "plate",
+      "arch"
+    ],
+    "type": "serif",
+    "summary": "A Warmaster-scale campaign command in sea-green, bronze, and dark ceremonial shadow.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-lorgar-aurelian",
+    "name": "Lorgar Aurelian — Word Bearers",
+    "group": "Primarchs",
+    "primarch": "Lorgar Aurelian",
+    "legion": "Word Bearers",
+    "colors": {
+      "background": "#211518",
+      "surface": "#40292E",
+      "text": "#F0E3D4",
+      "muted": "#C0AAA6",
+      "accent": "#DA978A",
+      "secondary": "#D1B583"
+    },
+    "motifs": [
+      "illuminated script margins",
+      "temple-like bays",
+      "red stone layers",
+      "repeated litany bands",
+      "bronze lectern frames"
+    ],
+    "frames": [
+      "arch",
+      "rail"
+    ],
+    "type": "serif",
+    "summary": "A monumental book-temple of red stone, bronze, and dense but disciplined marginalia.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-vulkan",
+    "name": "Vulkan — Salamanders",
+    "group": "Primarchs",
+    "primarch": "Vulkan",
+    "legion": "Salamanders",
+    "colors": {
+      "background": "#122016",
+      "surface": "#26402B",
+      "text": "#EFE9D4",
+      "muted": "#AFBEA7",
+      "accent": "#9DCF96",
+      "secondary": "#E0AC76"
+    },
+    "motifs": [
+      "forged green plates",
+      "ember-lit seams",
+      "hammered brass fittings",
+      "heat-darkened edges",
+      "protective layered shells"
+    ],
+    "frames": [
+      "plate",
+      "chamfer"
+    ],
+    "type": "sans",
+    "summary": "A protective artisan forge in deep green with warm ember light and handcrafted metalwork.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-corvus-corax",
+    "name": "Corvus Corax — Raven Guard",
+    "group": "Primarchs",
+    "primarch": "Corvus Corax",
+    "legion": "Raven Guard",
+    "colors": {
+      "background": "#11151B",
+      "surface": "#252E38",
+      "text": "#E8EAE6",
+      "muted": "#AAB7C3",
+      "accent": "#B2C7DB",
+      "secondary": "#B6A58E"
+    },
+    "motifs": [
+      "stealth-black planes",
+      "feather-like taper rhythm",
+      "pale reconnaissance marks",
+      "deep negative space",
+      "surgical rail divisions"
+    ],
+    "frames": [
+      "chamfer",
+      "rail"
+    ],
+    "type": "sans",
+    "summary": "A spare reconnaissance interface built from black planes, quiet pale markings, and open space.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-alpharius",
+    "name": "Alpharius — Alpha Legion",
+    "group": "Primarchs",
+    "primarch": "Alpharius",
+    "legion": "Alpha Legion",
+    "colors": {
+      "background": "#102023",
+      "surface": "#203D42",
+      "text": "#E2ECE7",
+      "muted": "#A3BFC1",
+      "accent": "#81D0CF",
+      "secondary": "#A7B8CF"
+    },
+    "motifs": [
+      "nested false panels",
+      "scale-like tiling",
+      "overlapping route diagrams",
+      "masked identity bays",
+      "cool metallic teal"
+    ],
+    "frames": [
+      "chamfer",
+      "rail"
+    ],
+    "type": "mono",
+    "summary": "An ambiguous teal intelligence console with layered paths and deliberately concealed depth.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/0fLfQljL/we-asked-forge-world-how-they-designed-all-18-primarchs/"
+  },
+  {
+    "id": "primarch-omegon",
+    "name": "Omegon — Alpha Legion",
+    "group": "Primarchs",
+    "primarch": "Omegon",
+    "legion": "Alpha Legion",
+    "colors": {
+      "background": "#111C23",
+      "surface": "#25343F",
+      "text": "#E3ECEB",
+      "muted": "#AABBC6",
+      "accent": "#A7BDD9",
+      "secondary": "#8BCDBF"
+    },
+    "motifs": [
+      "paired hidden chambers",
+      "mirrored route diagrams",
+      "silver-blue scales",
+      "subtle duplicated headings",
+      "concealed teal signals"
+    ],
+    "frames": [
+      "rail",
+      "chamfer"
+    ],
+    "type": "mono",
+    "summary": "A sibling Alpha Legion interpretation in silver-blue and teal; no invented distinct heraldry.",
+    "source": "https://www.warhammer-community.com/en-gb/articles/aidlhczn/legions-of-the-horus-heresy-the-alpha-legion-are-on-your-side-or-are-they/"
+  }
+]

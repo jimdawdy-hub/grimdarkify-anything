@@ -1,0 +1,36 @@
+/* Original gothic-industrial UI primitives. The generated header carries the fan notice. */
+[data-grimdark] { color-scheme: dark; accent-color: var(--gd-accent); }
+[data-grimdark] body {
+  color: var(--gd-text); background-color: var(--gd-background);
+  background-image: repeating-linear-gradient(var(--gd-rule-angle), transparent 0, transparent var(--gd-line-space), rgb(255 255 255 / var(--gd-grain)) calc(var(--gd-line-space) + 1px));
+  font-family: var(--gd-body); line-height: 1.65;
+}
+[data-grimdark] :where(h1,h2,h3,h4) { font-family: var(--gd-display); letter-spacing: var(--gd-tracking); color: var(--gd-text); }
+[data-grimdark] h1 { text-align: var(--gd-heading-align); }
+[data-grimdark] :where(a) { color: var(--gd-accent); text-underline-offset: .22em; }
+[data-grimdark] :where(button,input,select,textarea) { font: inherit; }
+[data-grimdark] :where(button,input,select,textarea) { color: var(--gd-text); background-color: var(--gd-surface); border: 1px solid var(--gd-accent); border-radius: 2px; padding: .6em .85em; }
+[data-grimdark] :where(button,[role="button"]) { cursor: pointer; min-height: 44px; }
+[data-grimdark] :where(button:hover) { box-shadow: inset 0 0 0 1px var(--gd-accent); }
+[data-grimdark] :where(button:disabled) { cursor: default; opacity: .6; }
+[data-grimdark] :where(:focus-visible) { outline: 3px solid var(--gd-secondary); outline-offset: 4px; }
+[data-grimdark] :where(code,pre,kbd,samp) { font-family: var(--gd-mono); }
+[data-grimdark] :where(th,td) { border-bottom: 1px solid var(--gd-muted); padding: .65em; text-align: left; }
+[data-grimdark] :where(.gd-panel,.card) { padding: var(--gd-space); background: var(--gd-surface); border: var(--gd-border-width) var(--gd-border-style) var(--gd-accent); border-radius: var(--gd-radius); }
+[data-grimdark] .gd-meta { font: .75rem var(--gd-mono); color: var(--gd-muted); letter-spacing: .1em; text-transform: uppercase; }
+[data-grimdark] .gd-muted { color: var(--gd-muted); }
+[data-gd-ornament="ceramic"] :where(.gd-panel,.card) { border-radius: 9px; border-left-width: 4px; border-style: solid; }
+[data-gd-ornament="blades"] :where(.gd-panel,.card) { border-radius: 1px 22px 1px 1px; border-top-width: 3px; border-bottom-color: var(--gd-secondary); }
+[data-gd-ornament="scrap"] :where(.gd-panel,.card) { border-width: 3px; border-style: dashed; border-radius: 0; }
+[data-gd-ornament="monolith"] :where(.gd-panel,.card) { border-radius: 0; border-left-width: 4px; border-right-width: 4px; }
+[data-gd-ornament="chitin"] :where(.gd-panel,.card) { border-radius: 28px 8px 28px 8px; border-top-width: 4px; }
+[data-gd-ornament="wraithbone"] :where(.gd-panel,.card) { border-radius: 32px 8px 8px 8px; border-left-width: 3px; }
+[data-gd-ornament="machine"] :where(.gd-panel,.card) { border-style: double; border-width: 4px; }
+[data-grimdark][data-gd-texture="scanlines"] body { background-image: repeating-linear-gradient(0deg, transparent 0 3px, rgb(255 255 255 / var(--gd-grain)) 4px); }
+[data-grimdark][data-gd-texture="patina"] body { background-image: radial-gradient(ellipse at 5% 10%, color-mix(in srgb, var(--gd-accent) 9%, transparent), transparent 65%); }
+[data-grimdark][data-gd-texture="crosshatch"] body { background-image: repeating-linear-gradient(var(--gd-rule-angle), transparent 0 7px, rgb(255 255 255 / var(--gd-grain)) 8px), repeating-linear-gradient(135deg, transparent 0 11px, rgb(255 255 255 / var(--gd-grain)) 12px); }
+.gd-notice { display: flex; flex-direction: column; gap: .35rem; position: relative; z-index: 1; margin: 2rem 0 0; padding: 1.25rem; border-top: 1px solid #a9956d; background: #111311; color: #e9dfc9; font: 12px/1.6 system-ui,sans-serif; text-align: left; }
+.gd-notice strong { color: #ebd5a0; font-size: 12px; letter-spacing: .08em; }
+.gd-notice a { color: #ebd5a0; }
+@media (prefers-reduced-motion: reduce) { [data-grimdark] *, [data-grimdark] *::before, [data-grimdark] *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+@media print { .gd-notice { display: flex !important; position: static !important; break-inside: avoid; background: white !important; color: black !important; border-color: black; } .gd-notice strong,.gd-notice a { color: black !important; } }

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-grimdark="space-marines">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An unofficial, non-commercial Warhammer 40,000 inspired design toolkit. Every faction. A different interpretation every time.">
+  <title>Grimdarkify Anything · Reforge your interface</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131513'/%3E%3Ctext x='12' y='48' font-size='48' fill='%23c9ad73' font-family='serif'%3EG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="demo.css">
+  <script type="module" src="demo.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#forge">Skip to the forge</a>
+  <header class="masthead">
+    <a class="wordmark" href="#top"><span class="brand-mark" aria-hidden="true">G</span><span>GRIMDARKIFY<span class="wordmark-sub">ANYTHING</span></span></a>
+    <nav aria-label="Main navigation"><a href="#forge">The forge</a><a href="#field-manual">Field manual</a><a href="https://github.com/jimdawdy-hub/grimdarkify-anything">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <span class="release">UNOFFICIAL FAN TOOLKIT <span>V0.1</span></span>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> A different kind of dark mode</p>
+        <h1 id="hero-title">GRIMDARKIFY<br><span>ANYTHING.</span></h1>
+        <p class="hero-lede">Your app has a function.<br>Give it a <em>faction.</em></p>
+        <p class="hero-description">Websites. Apps. Themes. Turn the everyday into the far future. Choose your allegiance. Reforge the design. Never get the same world twice.</p>
+        <a class="primary-link" href="#forge">ENTER THE FORGE <span aria-hidden="true">↓</span></a>
+        <div class="hero-facts"><span><b id="faction-count">49</b> faction &amp; primarch styles</span><span><b>∞</b> interpretations</span><span><b>0</b> API keys needed</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-corner corner-one"></div><div class="art-corner corner-two"></div>
+        <div id="reliquary"></div>
+        <div class="art-caption"><span>FIG. 001 / ORIGINAL GEOMETRIC STUDY</span><span id="art-direction">CEREMONIAL MACHINE</span></div>
+      </div>
+    </section>
+    <div class="marquee"><span>THE FUNCTION REMAINS.</span><span aria-hidden="true">✦</span><span>THE FORM IS REFORGED.</span><span aria-hidden="true">✦</span><span>UNOFFICIAL. FREE. FOR THE FUN OF IT.</span></div>
+    <section id="forge" class="forge-section" aria-labelledby="forge-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE FORGE</p><h2 id="forge-title">Choose your allegiance.</h2></div><p>One interface. A thousand possible futures.<br>Same faction, different design. Every time.</p></div>
+      <div class="workbench">
+        <aside class="forge-controls" aria-label="Design controls">
+          <label for="faction-search" class="control-label">FIND YOUR FACTION</label>
+          <input id="faction-search" type="search" placeholder="Faction, legion, or primarch…" autocomplete="off">
+          <label for="faction" class="control-label">ALLEGIANCE</label>
+          <select id="faction" aria-describedby="faction-description"><option>Loading factions…</option></select>
+          <p id="faction-description" class="faction-description"></p>
+          <div class="palette" id="palette" role="group" aria-label="Generated palette"></div>
+          <div class="design-spec"><p><span>FRAME</span><b id="frame-value">—</b></p><p><span>SURFACE</span><b id="texture-value">—</b></p><p><span>COMPOSITION</span><b id="layout-value">—</b></p></div>
+          <button id="reforge" class="reforge" type="button">REFORGE <span aria-hidden="true">⟳</span></button>
+          <p class="control-note">Fresh entropy on every strike.<br>The faction stays. The design evolves.</p>
+          <details class="export-controls"><summary>EXPORT THIS VARIATION</summary><button id="export-css" type="button">Download stylesheet ↓</button><button id="export-tokens" type="button">Download design tokens ↓</button><button id="export-brief" type="button">Download agent brief ↓</button><button id="export-svg" type="button">Download art study (SVG) ↓</button></details>
+        </aside>
+        <div class="preview-area">
+          <div class="preview-toolbar"><span><i aria-hidden="true"></i> LIVE SPECIMEN / PROJECT ATLAS</span><div class="comparison" role="group" aria-label="Preview mode"><button id="before" type="button" aria-pressed="false">Before</button><button id="after" type="button" aria-pressed="true">Reforged</button></div></div>
+          <div class="app-window" id="specimen">
+            <div class="app-topbar"><span class="app-emblem" aria-hidden="true">✦</span><strong>ATLAS</strong><span class="app-workspace">Workspace / Overview</span><span class="app-avatar" role="img" aria-label="Demo user JD">JD</span></div>
+            <div class="app-body"><nav class="app-nav" aria-label="Demo project views"><button class="active" type="button" data-view="Overview">◈ <span>Overview</span></button><button type="button" data-view="Projects">▤ <span>Projects</span></button><button type="button" data-view="Activity">⌁ <span>Activity</span></button><span class="app-nav-bottom">SECTOR 004<br>ALL SYSTEMS NOMINAL</span></nav>
+              <div class="app-content"><div class="app-title-row"><div><p class="app-kicker" id="app-kicker">YOUR WORK, IN ORDER</p><h3 id="app-title">Command overview</h3></div><button id="new-task" type="button">+ New task</button></div>
+                <div class="app-stats"><article class="gd-panel"><p>Active projects</p><b>08</b><span>2 nearing completion</span></article><article class="gd-panel"><p>Completed tasks</p><b id="completed-count">24</b><span>This campaign</span></article><article class="gd-panel"><p>System health</p><b>99<span>%</span></b><span>Operational</span></article></div>
+                <section class="mission-panel gd-panel" aria-labelledby="mission-title"><div class="mission-heading"><h4 id="mission-title">Today's directives</h4><span>3 ASSIGNED</span></div><label class="task"><input type="checkbox"><span><strong>Review the navigation</strong><small>Design system · High priority</small></span><span class="task-badge">DESIGN</span></label><label class="task"><input type="checkbox"><span><strong>Deploy the new release</strong><small>Infrastructure · Due today</small></span><span class="task-badge">OPS</span></label><label class="task"><input type="checkbox"><span><strong>Document the components</strong><small>Engineering · In progress</small></span><span class="task-badge">BUILD</span></label><form id="task-form" hidden><label for="task-name">Task name</label><div class="task-entry"><input id="task-name" maxlength="80" required placeholder="A new directive…"><button type="submit">Add task</button></div></form></section>
+                <div class="app-bottomline"><span id="specimen-faction">UNOFFICIAL FACTION STUDY</span><span>FUNCTION PRESERVED / FORM REFORGED</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="preview-notice"><strong>UNOFFICIAL · NON-COMMERCIAL FAN WORK</strong> · Not affiliated with or endorsed by Games Workshop. Warhammer 40,000 IP belongs to Games Workshop Limited. No official logos or artwork.</div>
+          <div class="variation-line" aria-live="polite"><span id="variation-status">Preparing the forge…</span><span id="seed-value"></span></div>
+        </div>
+      </div>
+    </section>
+    <section id="field-manual" class="manual" aria-labelledby="manual-title"><div class="section-heading"><div><p class="eyebrow">02 / FIELD MANUAL</p><h2 id="manual-title">Bring your own machine.</h2></div><p>A toolkit for your coding agent.<br>A working CLI for the rest of us.</p></div><div class="manual-grid"><article><span class="step">I.</span><h3>Choose a faction.</h3><p>From Drukhari blades to T'au precision. Every major army, plus the known primarchs and their legions.</p></article><article><span class="step">II.</span><h3>Reforge the design.</h3><p>Get a fresh palette, material, frame, typographic treatment, and design brief. No paid model needed.</p></article><article><span class="step">III.</span><h3>Keep what works.</h3><p>Your agent applies the design to your stack. Your routes, data, controls, and accessibility endure.</p></article></div><div class="terminal"><span class="terminal-label">YOUR TERMINAL</span><code>git clone https://github.com/jimdawdy-hub/grimdarkify-anything.git<br>cd grimdarkify-anything<br>node bin/grimdarkify.mjs kit --faction drukhari --out ./my-kit</code><button id="copy-command" type="button">Copy commands</button></div><p class="manual-footnote">Website URL mode creates a local static preview. Native apps need editable source or a supported theme format. This toolkit does not rewrite closed binaries.</p></section>
+  </main>
+  <!-- FAN_NOTICE -->
+  <div class="site-colophon"><span>GRIMDARKIFY ANYTHING / AN UNOFFICIAL FAN EXPERIMENT</span><a href="https://github.com/jimdawdy-hub/grimdarkify-anything">Source &amp; field notes ↗</a></div>
+</body>
+</html>
